@@ -7,9 +7,4 @@
     <RootNamespace>XISD6329_Website</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\DemoSplit\" />
-    <Folder Include="Views\Pages\" />
-  </ItemGroup>
-
 </Project>
