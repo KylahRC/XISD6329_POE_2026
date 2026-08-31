@@ -19,6 +19,45 @@ namespace XISD6329_Website.Controllers
             return View();
         }
 
+        public IActionResult CapeTown()
+        {
+            return View();
+        }
+        
+        public IActionResult FlightsAndMedical()
+        {
+            return View();
+        }
+
+        public IActionResult LanguageSchool()
+        {
+            return View();
+        }
+
+        public IActionResult OnlineEnglishClasses()
+        {
+            return View();
+        }
+
+        public IActionResult OurTeam()
+        {
+            return View();
+        }
+
+        public IActionResult Reseller()
+        {
+            return View();
+        }
+
+        public IActionResult Services()
+        {
+            return View();
+        }
+
+        public IActionResult TEFLInstitute()
+        {
+            return View();
+        }
 
     }
 }
