@@ -18,6 +18,11 @@ namespace XISD6329_Website.Controllers
             return View();
         }
 
+        public IActionResult HomePage_ENG()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
