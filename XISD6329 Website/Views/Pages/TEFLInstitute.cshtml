@@ -11,57 +11,24 @@
     <link rel="stylesheet" href="~/css/site.css" />
 
     <style>
-        .container, .container-fluid {
-            max-width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        section, div {
-            text-align: left;
-        }
-
-        body {
-            margin: 0;
-            font-family: Inter, sans-serif;
-            background: #02091C;
-            color: white;
-        }
-
+        /* Add styles specific to the TEFL Institute page */
        
-
-        /* Hero section */
-        .hero {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-            .hero h1 {
-                font-family: "ADLaM Display", cursive;
-                font-size: 64px;
-                margin-bottom: 20px;
-            }
-
-            .hero p {
-                font-size: 16px;
-                max-width: 85%;
-                margin: 0 auto;
-            }
-
-        /* FAQ section */
-        .faq {
+        .faq 
+        {
             padding: 40px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-            .faq h2 {
+            .faq h2 
+            {
                 font-size: 28px;
                 margin-bottom: 20px;
                 text-align: center;
             }
 
-        .faq-item {
+        .faq-item 
+        {
             margin-bottom: 20px;
             background: #D9D9D9;
             color: black;
@@ -69,45 +36,39 @@
             box-shadow: 0 10px 4px rgba(0,0,0,0.25);
         }
 
-            .faq-item h3 {
+            .faq-item h3 
+            {
                 font-size: 22px;
                 margin-bottom: 10px;
             }
 
-            .faq-item p {
+            .faq-item p 
+            {
                 font-size: 18px;
             }
 
-        
-        /* Footer */
-        footer {
-            background: #01B697;
-            width: 100%;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: white;
-        }
     </style>
 </head>
 <body>
 
-
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Holds the title and introductory paragraph about the TEFL Institute page -->
+    <section class="PageIntro">
         <h1>TEFL Institute</h1>
+
+        <!-- TODO decide if we need a write up for FAQ page -->
         <p>
             Basically a FAQ page for TEFL Institute.
             May keep the drop style that currently exists, colour integration may be difficult.
             Need to add the contact form since it is specifically for the TEFL, not SBA.
         </p>
     </section>
+    <!-- PageIntro -->
 
     <!-- FAQ section -->
+    <!--? coloured blocks or whiteish -->
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
+        <!-- TODO get FAQs from client -->
         <div class="faq-item">
             <h3>Question One</h3>
             <p>Answer to question one goes here.</p>

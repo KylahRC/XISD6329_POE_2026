@@ -2530,7 +2530,7 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 				condense( elems, preMap, preFilter, context, xml ) :
 				elems,
 
-			matcherOut = matcher ?
+			matcPageIntrout = matcher ?
 
 				// If we have a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
 				postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
@@ -2544,19 +2544,19 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 
 		// Find primary matches
 		if ( matcher ) {
-			matcher( matcherIn, matcherOut, context, xml );
+			matcher( matcherIn, matcPageIntrout, context, xml );
 		}
 
 		// Apply postFilter
 		if ( postFilter ) {
-			temp = condense( matcherOut, postMap );
+			temp = condense( matcPageIntrout, postMap );
 			postFilter( temp, [], context, xml );
 
 			// Un-match failing elements by moving them back to matcherIn
 			i = temp.length;
 			while ( i-- ) {
 				if ( ( elem = temp[ i ] ) ) {
-					matcherOut[ postMap[ i ] ] = !( matcherIn[ postMap[ i ] ] = elem );
+					matcPageIntrout[ postMap[ i ] ] = !( matcherIn[ postMap[ i ] ] = elem );
 				}
 			}
 		}
@@ -2565,23 +2565,23 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 			if ( postFinder || preFilter ) {
 				if ( postFinder ) {
 
-					// Get the final matcherOut by condensing this intermediate into postFinder contexts
+					// Get the final matcPageIntrout by condensing this intermediate into postFinder contexts
 					temp = [];
-					i = matcherOut.length;
+					i = matcPageIntrout.length;
 					while ( i-- ) {
-						if ( ( elem = matcherOut[ i ] ) ) {
+						if ( ( elem = matcPageIntrout[ i ] ) ) {
 
 							// Restore matcherIn since elem is not yet a final match
 							temp.push( ( matcherIn[ i ] = elem ) );
 						}
 					}
-					postFinder( null, ( matcherOut = [] ), temp, xml );
+					postFinder( null, ( matcPageIntrout = [] ), temp, xml );
 				}
 
 				// Move matched elements from seed to results to keep them synchronized
-				i = matcherOut.length;
+				i = matcPageIntrout.length;
 				while ( i-- ) {
-					if ( ( elem = matcherOut[ i ] ) &&
+					if ( ( elem = matcPageIntrout[ i ] ) &&
 						( temp = postFinder ? indexOf( seed, elem ) : preMap[ i ] ) > -1 ) {
 
 						seed[ temp ] = !( results[ temp ] = elem );
@@ -2591,15 +2591,15 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 
 		// Add elements to results, through postFinder if defined
 		} else {
-			matcherOut = condense(
-				matcherOut === results ?
-					matcherOut.splice( preexisting, matcherOut.length ) :
-					matcherOut
+			matcPageIntrout = condense(
+				matcPageIntrout === results ?
+					matcPageIntrout.splice( preexisting, matcPageIntrout.length ) :
+					matcPageIntrout
 			);
 			if ( postFinder ) {
-				postFinder( null, results, matcherOut, xml );
+				postFinder( null, results, matcPageIntrout, xml );
 			} else {
-				push.apply( results, matcherOut );
+				push.apply( results, matcPageIntrout );
 			}
 		}
 	} );

@@ -12,97 +12,60 @@
 
 
     <style>
-        .container, .container-fluid {
-            max-width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }      
+        /* Add styles specific to the Home page */
 
-        body {
-            margin: 0;
-            font-family: Inter, sans-serif;
-            background: #02091C;
-            color: white;
-        }        
-
-        
-        .PageIntro {
-            padding: 40px 20px;
-            align-content: center;
-            text-align: center
-        }
-
-            .PageIntro h1 {
-                font-family: "ADLaM Display", cursive;
-                font-size: 64px;
-                margin-bottom: 20px;
-            }
-
-            .PageIntro p {
-                font-size: 20px;
-                max-width: 83%;
-                margin: 0 auto;
-            }
-
-        .ColourBlocks {
+        .ColourBlocks 
+        {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap; /* allows stacking on small screens */
+            justify-content: space-between; /* make space between blocks even */
+            flex-wrap: wrap; /* stack vertical when small screen */
             width: 100%;
             padding: 40px 20px;
-            gap: 20px;
+            gap: 20px; /* set space between blocks */
         }
 
-        .block {
-            flex: 1 1 30%; /* about 320px of 1440px */
-            min-width: 280px; /* ensures stacking when too narrow */
+        .block 
+        {
+            flex: 1 1 30%; /* percent based on 1440x1220 Figma design */
+            min-width: 280px; /* when to stack */
             height: 503px;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* set to vertical (column)*/
             align-items: center;
-            justify-content: flex-start;
-            color: black;
+            justify-content: flex-start; 
+            color: black; /* text colour, not bg*/
             font-size: 20px;
-            background: #D9D9D9;
+            background: #D9D9D9; /* block default background colour, in line override per block */
             box-shadow: 0 10px 4px rgba(0,0,0,0.25);
         }
 
-            .block img {
+            .block img 
+            {
                 width: 85%;
                 height: auto;
                 margin-top: 20px;
-                background: #D9D9D9;
+                background: #D9D9D9; /* image background colour when no image, for debug */
             }
 
-            .block h2 {
+            .block h2 
+            {
                 margin-top: 20px;
                 font-size: 36px;
             }
 
-            .block button {
+            .block button 
+            {
                 margin-top: auto;
                 margin-bottom: 20px;
                 width: 70%;
                 height: 52px;
                 font-size: 20px;
-                background: #D9D9D9;
+                /* TODO find better colour for button */
+                background: #D9D9D9; /* button background colour */
                 border: none;
                 cursor: pointer;
                 box-shadow: 0 10px 4px rgba(0,0,0,0.25);
             }
-
-        footer {
-            background: #01B697;
-            width: 100%;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: white;
-        }
-
-
     </style>
 </head>
 
@@ -127,16 +90,16 @@
         <!-- Private demo ad -->
         <div class="block" style="background:#2B74DD">
 
-            <!-- Insert desired photo relevent to private demographic -->
+            <!-- TODO Insert desired photo relevent to private demographic -->
             <!-- TODO Find private image -->
             <img src="https://placehold.co/272x166" alt="Private photo">
 
             <!-- Private demo title, must hook clients -->
-            <!-- TODO Make title for private demo -->
+            <!-- TODO Get title for private demo from client -->
             <h2>Targeting private demographic</h2>
 
             <!-- Private demo flavor text, further hook the client -->
-            <!-- TODO Create actual flavor text for private demo -->
+            <!-- TODO Get flavor text for private demo from client -->
             <p>About private english</p>
 
             <!-- Button to take user to private demo page -->
@@ -149,16 +112,16 @@
         <!-- Corporate demo ad -->
         <div class="block" style="background:#E3AF20">
 
-            <!-- Insert desired photo relevent to corporate demographic -->
+            <!-- TODO Insert desired photo relevent to corporate demographic -->
             <!-- TODO Find corporate image -->
             <img src="https://placehold.co/272x166" alt="Corporate photo">
 
             <!-- Corporate demo title, catch employers eye -->
-            <!-- TODO Create proper title for corporate demo -->
+            <!-- TODO Get title for corporate demo from client -->
             <h2>Targeting Companies</h2>
 
             <!-- Corporate demo flavor text, make employer feel it will be net positive -->
-            <!-- TODO Create actual flavor text for corporate demo -->
+            <!-- TODO Get flavor text for corporate demo from client -->
             <p>Appeal to corporate</p>
 
             <!-- Button to take user to corporate demo page -->
@@ -171,17 +134,17 @@
         <!-- Government demo ad -->
         <div class="block" style="background:#E86666">
 
-            <!-- Insert desired photo relevent to government demographic -->
+            <!-- TODO Insert desired photo relevent to government demographic -->
             <!-- TODO Find government image -->
             <img src="https://placehold.co/272x166" alt="Government photo">
 
             <!-- Government demo title, catch government eye -->
-            <!-- TODO Create title for gov demo -->
+            <!-- TODO Get title for gov demo from client -->
             <h2>Target Government</h2>
 
 
             <!-- Government demo flavor text, explain why they should do this -->
-            <!-- TODO Create actual flavor text for government demo -->
+            <!-- TODO Get flavor text for government demo from client -->
             <p>Government related image</p>
 
 

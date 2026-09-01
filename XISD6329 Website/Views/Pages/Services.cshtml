@@ -11,114 +11,80 @@
     <link rel="stylesheet" href="~/css/site.css" />
 
     <style>
-        .container, .container-fluid {
-            max-width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        section, div {
-            text-align: left;
-        }
-
-        body {
-            margin: 0;
-            font-family: Inter, sans-serif;
-            background: #02091C;
-            color: white;
-        }
-
-        
-        /* Hero section */
-        .hero {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-            .hero h1 {
-                font-family: "ADLaM Display", cursive;
-                font-size: 64px;
-                margin-bottom: 20px;
-            }
-
-            .hero p {
-                font-size: 16px;
-                max-width: 85%;
-                margin: 0 auto;
-            }
-
-        /* Services section */
-        .services {
+       /* Add styles specific to the Services page */
+        .services 
+        {
             padding: 40px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-            .services h2 {
+            .services h2 
+            {
                 font-size: 28px;
                 margin-bottom: 20px;
                 text-align: center;
             }
 
-        .service-item {
+        .service-item 
+        {
             margin-bottom: 20px;
-            background: #D9D9D9;
+            background: #D9D9D9; /* default background, change using in line styles*/
             color: black;
             padding: 20px;
             box-shadow: 0 10px 4px rgba(0,0,0,0.25);
         }
 
-            .service-item h3 {
+            .service-item h3 
+            {
                 font-size: 24px;
                 margin-bottom: 10px;
             }
 
-            .service-item p {
+            .service-item p 
+            {
                 font-size: 18px;
             }
 
-        /* Footer */
-        footer {
-            background: #01B697;
-            width: 100%;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: white;
-        }
     </style>
 </head>
-<body>
+<body>  
 
-   
-
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Holds the title and introductory paragraph about the Services page -->
+    <section class="PageIntro">
         <h1>Services</h1>
+
+        <!-- TODO figure out how to style this-->
         <p>
             Current site is just a numbered list.
             Maybe have headings for the things they do and then expand on those services properly.
         </p>
     </section>
+    <!-- PageIntro -->
 
     <!-- Services section -->
     <section class="services">
+
+        <!-- TODO find out what they offer -->
         <h2>What We Offer</h2>
+
         <div class="service-item">
             <h3>Service One</h3>
             <p>Description of service one goes here.</p>
         </div>
+
         <div class="service-item">
             <h3>Service Two</h3>
             <p>Description of service two goes here.</p>
         </div>
+
         <div class="service-item">
             <h3>Service Three</h3>
             <p>Description of service three goes here.</p>
         </div>
+
     </section>
+
 
     <!-- Footer -->
     <footer>
