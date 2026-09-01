@@ -2,16 +2,144 @@
     ViewData["Title"] = "Study Better - About Us";
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
 
-    <div data-layer="Rectangle 7" class="Rectangle7" style="width: 1440px; height: 70px; left: 0px; top: 728px; position: absolute; background: #01B697"></div>
-    <div data-layer="Footer with relevant info" class="FooterWithRelevantInfo" style="left: 514px; top: 741px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word">Footer with relevant info</div>
-    <div data-layer="Header" class="Header" style="width: 1440px; height: 47px; left: 0px; top: 0px; position: absolute; background: #01B697"></div>
-    <div data-layer="Select few | menu Items | will go here" class="SelectFewMenuItemsWillGoHere" style="left: 786px; top: 11px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Select few | menu Items | will go here</div>
-    <div data-layer="Dropdown for rest" class="DropdownForRest" style="left: 1232px; top: 13px; position: absolute; color: white; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Dropdown for rest</div>
-    <div data-layer="Translation button" class="TranslationButton" style="width: 308px; left: 0px; top: 2px; position: absolute; color: black; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Translation button</div>
-    <div data-layer="Side photos 3" class="SidePhotos3" style="width: 1036px; height: 247px; left: 404px; top: 47px; position: absolute; background: #6D6D6D"></div>
-    <div data-layer="Logo" class="Logo" style="width: 404px; height: 247px; left: 0px; top: 47px; position: absolute; background: #D9D9D9"></div>
-    <div data-layer="Logo with just the big letters" class="LogoWithJustTheBigLetters" style="width: 326px; left: 39px; top: 122px; position: absolute; text-align: center; color: black; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Logo with just the big letters</div>
-    <div data-layer="The tagline underneath the logo but really big to fill the space in a good way" class="TheTaglineUnderneathTheLogoButReallyBigToFillTheSpaceInAGoodWay" style="width: 863px; left: 490px; top: 122px; position: absolute; text-align: center; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">The tagline underneath the logo but really big to fill the space in a good way</div>
-    <div data-layer="About us" class="AboutUs" style="left: 582px; top: 316px; position: absolute; text-align: center; color: white; font-size: 64px; font-family: ADLaM Display; font-weight: 400; word-wrap: break-word">About us</div>
-    <div data-layer="Need a page that explains what their agency really does. Expand on the things not covered in the other pages and summarize the stuff that was. then add links to the relevant pages to expand on it? possibly make the about page the first one in the menu list? must ask client to do write ups for website, we do not know the company like they do." class="NeedAPageThatExplainsWhatTheirAgencyReallyDoesExpandOnTheThingsNotCoveredInTheOtherPagesAndSummarizeTheStuffThatWasThenAddLinksToTheRelevantPagesToExpandOnItPossiblyMakeTheAboutPageTheFirstOneInTheMenuListMustAskClientToDoWriteUpsForWebsiteWeDoNotKnowTheCompanyLikeTheyDo" style="width: 1251px; left: 94px; top: 400px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Need a page that explains what their agency really does. Expand on the things not covered in the other pages and summarize the stuff that was.<br />then add links to the relevant pages to expand on it? possibly make the about page the first one in the menu list?<br />must ask client to do write ups for website, we do not know the company like they do.</div>
+        .container, .container-fluid {
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Make all sections flush left */
+        section, div {
+            text-align: left;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: #02091C;
+            color: white;
+        }
+
+        /* Header */
+        .header {
+            background: #01B697;
+            width: 100%;
+            height: 47px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .translation {
+            font-size: 24px;
+            color: black;
+        }
+
+        .menu {
+            margin-left: auto;
+            font-size: 24px;
+            color: white;
+        }
+
+        .dropdown {
+            margin-left: 40px;
+            font-size: 20px;
+            color: white;
+        }
+
+        /* Logo + side photo row */
+        .logo-row {
+            display: flex;
+            width: 100%;
+            height: 247px;
+        }
+
+        .logo {
+            width: 28%; /* roughly 404px on 1440px screen */
+            background: #D9D9D9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: black;
+        }
+
+        .side-photo {
+            width: 72%; /* fills the rest */
+            background: #6D6D6D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+        }
+
+        /* Hero section */
+        .hero {
+            padding: 40px 20px;
+            text-align: left;
+        }
+
+            .hero h1 {
+                font-family: "ADLaM Display", cursive;
+                font-size: 64px;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
+                max-width: 100%;
+            }
+
+        /* Footer */
+        footer {
+            background: #01B697;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="translation">Translation button</div>
+        <div class="menu">Select few | menu Items | will go here</div>
+        <div class="dropdown">Dropdown for rest</div>
+    </div>
+
+    <!-- Logo + tagline row -->
+    <div class="logo-row">
+        <div class="logo">Logo with big letters</div>
+        <div class="side-photo">The tagline underneath the logo but really big to fill the space in a good way</div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>About Us</h1>
+        <p>
+            Need a page that explains what their agency really does. Expand on the things not covered in the other pages and summarize the stuff that was. Then add links to the relevant pages to expand on it. Possibly make the about page the first one in the menu list. Must ask client to do write ups for website, we do not know the company like they do.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Footer with relevant info
+    </footer>
+
+</body>
+</html>
