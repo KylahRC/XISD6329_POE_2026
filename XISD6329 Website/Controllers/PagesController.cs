@@ -59,5 +59,12 @@ namespace XISD6329_Website.Controllers
             return View();
         }
 
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+
+        
+
     }
 }

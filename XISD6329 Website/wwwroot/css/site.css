@@ -22,3 +22,37 @@ body {
     background-color: #02091C;
 }
 
+.side-menu {
+    position: fixed;
+    top: 100px;
+    right: -300px; /* hidden off screen */
+    width: 300px;
+    height: 100%;
+    background: #02091C;
+    color: white;
+    transition: right 0.3s ease;
+    padding: 20px;
+/*    padding-top: 120px;*/
+    z-index: 100;
+}
+
+    .side-menu.open {
+        right: 0; /* slides in */
+        z-index: 100;
+    }
+
+    .side-menu ul {
+        list-style: none;
+        padding: 0;
+
+    }
+
+    .side-menu li {
+        margin: 20px 0;
+    }
+
+    .side-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
