@@ -5,52 +5,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
+
+
     <style>
         .container, .container-fluid {
             max-width: 100% !important;
             margin: 0 !important;
             padding: 0 !important;
-        }
-
-        /* section, div {
-            text-align: left;
-        } */
+        }      
 
         body {
             margin: 0;
             font-family: Inter, sans-serif;
             background: #02091C;
             color: white;
-        }
-
-
+        }        
 
         
-
-        /* Hero section */
-        .hero {
+        .PageIntro {
             padding: 40px 20px;
             align-content: center;
             text-align: center
         }
 
-            .hero h1 {
+            .PageIntro h1 {
                 font-family: "ADLaM Display", cursive;
                 font-size: 64px;
                 margin-bottom: 20px;
             }
 
-            .hero p {
+            .PageIntro p {
                 font-size: 20px;
                 max-width: 83%;
                 margin: 0 auto;
             }
 
-        /* Blocks row */
-        .blocks {
+        .ColourBlocks {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap; /* allows stacking on small screens */
@@ -97,7 +91,6 @@
                 box-shadow: 0 10px 4px rgba(0,0,0,0.25);
             }
 
-        /* Footer */
         footer {
             background: #01B697;
             width: 100%;
@@ -112,46 +105,101 @@
 
     </style>
 </head>
+
 <body>
-
-    
-
-    
-
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Holds the title and paragraph about the page -->
+    <section class="PageIntro">
+        
         <h1>Welcome</h1>
+
         <p>
+            <!-- Will be changed to have actual content relevant to the page -->
+            <!-- TODO Write actual intro -->
             Introductory paragraph about the agency and what you offer so the client understands somewhat of what the purpose of the agency is and therefore can make an informed choice about which demographic their needs fall into.
         </p>
+
     </section>
+    <!-- Page Intro -->
 
-    <!-- Blocks -->
-    <div class="blocks">
+    <!-- Holds the 3 colour blocks that split into the demo pages -->
+    <div class="ColourBlocks"> 
+
+        <!-- Private demo ad -->
         <div class="block" style="background:#2B74DD">
-            <img src="https://placehold.co/272x166" alt="Private photo">
-            <h2>Targeting private demographic</h2>
-            <p>Photo relevant to the everyman</p>
-            <button>Button link</button>
-        </div>
-        <div class="block" style="background:#E3AF20">
-            <img src="https://placehold.co/272x166" alt="Corporate photo">
-            <h2>Targeting Companies</h2>
-            <p>Appeal to corporate with professional image</p>
-            <button>To go to the</button>
-        </div>
-        <div class="block" style="background:#E86666">
-            <img src="https://placehold.co/272x166" alt="Government photo">
-            <h2>Target Government</h2>
-            <p>Government related image</p>
-            <button>Desired page</button>
-        </div>
-    </div>
 
-    <!-- Footer -->
+            <!-- Insert desired photo relevent to private demographic -->
+            <!-- TODO Find private image -->
+            <img src="https://placehold.co/272x166" alt="Private photo">
+
+            <!-- Private demo title, must hook clients -->
+            <!-- TODO Make title for private demo -->
+            <h2>Targeting private demographic</h2>
+
+            <!-- Private demo flavor text, further hook the client -->
+            <!-- TODO Create actual flavor text for private demo -->
+            <p>About private english</p>
+
+            <!-- Button to take user to private demo page -->
+            <!-- TODO Style and link the button -->
+            <button>Go to PrivateDemo.cshtml</button>
+
+        </div>
+        <!-- Private demo ad -->
+
+        <!-- Corporate demo ad -->
+        <div class="block" style="background:#E3AF20">
+
+            <!-- Insert desired photo relevent to corporate demographic -->
+            <!-- TODO Find corporate image -->
+            <img src="https://placehold.co/272x166" alt="Corporate photo">
+
+            <!-- Corporate demo title, catch employers eye -->
+            <!-- TODO Create proper title for corporate demo -->
+            <h2>Targeting Companies</h2>
+
+            <!-- Corporate demo flavor text, make employer feel it will be net positive -->
+            <!-- TODO Create actual flavor text for corporate demo -->
+            <p>Appeal to corporate</p>
+
+            <!-- Button to take user to corporate demo page -->
+            <!-- TODO Style and link the button to CorporateDemo.cshtml -->
+            <button>Go to CorporateDemo.cshtml</button>
+
+        </div>
+        <!--  -->
+
+        <!-- Government demo ad -->
+        <div class="block" style="background:#E86666">
+
+            <!-- Insert desired photo relevent to government demographic -->
+            <!-- TODO Find government image -->
+            <img src="https://placehold.co/272x166" alt="Government photo">
+
+            <!-- Government demo title, catch government eye -->
+            <!-- TODO Create title for gov demo -->
+            <h2>Target Government</h2>
+
+
+            <!-- Government demo flavor text, explain why they should do this -->
+            <!-- TODO Create actual flavor text for government demo -->
+            <p>Government related image</p>
+
+
+            <!-- Button to take user to government demo page -->
+            <!-- TODO Style and link the button to GovernmentDemo.cshtml -->
+            <button>Go to GovernmentDemo.cshtml</button>
+
+        </div> 
+        <!-- Government demo ad -->
+
+    </div>
+    <!-- Colour blocks -->
+
+    <!-- Footer, self explanatory -->
     <footer>
         Footer with relevant info
     </footer>
+    <!-- Footer -->
 
 </body>
 </html>
