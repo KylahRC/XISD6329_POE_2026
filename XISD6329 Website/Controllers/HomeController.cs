@@ -1,5 +1,5 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 using XISD6329_Website.Models;
 
 namespace XISD6329_Website.Controllers

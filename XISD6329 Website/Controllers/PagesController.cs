@@ -23,7 +23,7 @@ namespace XISD6329_Website.Controllers
         {
             return View();
         }
-        
+
         public IActionResult FlightsAndMedical()
         {
             return View();
@@ -64,7 +64,7 @@ namespace XISD6329_Website.Controllers
             return View();
         }
 
-        
+
 
     }
 }

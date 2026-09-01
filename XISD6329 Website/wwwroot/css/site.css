@@ -56,3 +56,81 @@ body {
         text-decoration: none;
         font-size: 20px;
     }
+
+/* Logo + tagline row */
+.logo-row {
+    display: flex;
+    width: 100%;
+    height: 247px;
+    padding-left: 100px;
+}
+
+.logo {
+    width: 28%;
+    background: #02091C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: black;
+}
+
+.LetterLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1); /* zoom slightly */
+}
+
+.TextLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(0.8); /* zoom slightly */
+}
+
+.tagline {
+    width: 72%;
+    background: #02091C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+/* Header */
+.header {
+    background: #01B697;
+    width: 100%;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10000;
+    position: relative;
+}
+
+.translation {
+    font-size: 24px;
+    color: black;
+}
+
+.menu {
+    margin-left: auto;
+    font-size: 24px;
+    color: white;
+}
+
+.dropdown {
+    margin-left: 40px;
+    font-size: 20px;
+    color: white;
+    z-index: 10000;
+}
+
+    .dropdown:hover {
+        color: #02091C;
+    }
