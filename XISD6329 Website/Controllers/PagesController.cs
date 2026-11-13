@@ -14,12 +14,22 @@ namespace XISD6329_Website.Controllers
             return View();
         }
 
+        public IActionResult Activities()
+        {
+            return View();
+        }
+
         public IActionResult BookingProcess()
         {
             return View();
         }
 
         public IActionResult CapeTown()
+        {
+            return View();
+        }
+
+        public IActionResult ContactUs()
         {
             return View();
         }
@@ -44,6 +54,11 @@ namespace XISD6329_Website.Controllers
             return View();
         }
 
+        public IActionResult PayHere()
+        {
+            return View();
+        }
+
         public IActionResult Reseller()
         {
             return View();
@@ -59,12 +74,25 @@ namespace XISD6329_Website.Controllers
             return View();
         }
 
-        public IActionResult ContactUs()
+        // --- Registration and Form Submission Actions ---
+
+        public IActionResult Register()
         {
             return View();
         }
 
+        [HttpPost]
+        public IActionResult SubmitRegistration(string FullName, string Email, string Phone, string Course, string Accommodation, string StartDate, string Duration, string Notes)
+        {
+            // Logic to process or save registration details  go here
+            return RedirectToAction("Register", new { success = true });
+        }
 
-
+        [HttpPost]
+        public IActionResult SubmitContact(string Name, string Email, string Message)
+        {
+            // Logic to process or save contact messages goes here
+            return RedirectToAction("ContactUs", new { success = true });
+        }
     }
 }

@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Study Better Agency - Registration Form";
+}
+
+<div class="container my-5">
+    <!-- Hero Banner -->
+    <div class="text-center p-5 mb-5 rounded shadow-sm text-dark" style="background-color: #f8961e;">
+        <h1 class="display-4 fw-bold">Registration Form</h1>
+        <p class="lead mt-2">Complete the form below to receive your customized quotation and secure your study placement.</p>
+    </div>
+
+    <!-- Success Message Alert (triggers after form submit) -->
+    @if (Context.Request.Query["success"] == "true")
+    {
+        <div class="alert alert-success text-center py-4 shadow-sm mb-4" role="alert">
+            <h4 class="alert-heading fw-bold">Success! Your request has been successfully submitted.</h4>
+            <p class="mb-0">Thank you for registering with Study Better Agency. Our team will review your details and email your quotation shortly.</p>
+        </div>
+    }
+
+    <!-- Registration Form Card -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm p-4 bg-white rounded">
+                <form asp-controller="Pages" asp-action="SubmitRegistration" method="post">
+                    
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Full Name</label>
+                        <input type="text" class="form-control" name="FullName" placeholder="Enter your full name" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Email Address *</label>
+                        <input type="email" class="form-control" name="Email" placeholder="name@example.com" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Phone Number</label>
+                        <input type="tel" class="form-control" name="Phone" placeholder="+27 ..." />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Course Selection</label>
+                        <select class="form-select" name="Course">
+                            <option selected>Select an English Course...</option>
+                            <option value="General English">General English (20 lessons/week)</option>
+                            <option value="Intensive English">Intensive English (30 lessons/week)</option>
+                            <option value="IELTS Preparation">IELTS Exam Preparation</option>
+                            <option value="Business English">Business English</option>
+                            <option value="Private Lessons">Private One-on-One Lessons</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Accommodation Type</label>
+                        <select class="form-select" name="Accommodation">
+                            <option selected>Select accommodation preference...</option>
+                            <option value="Homestay Single - Shared Bathroom">Homestay Single (Shared Bathroom)</option>
+                            <option value="Homestay Single - Private Bathroom">Homestay Single (Private Bathroom)</option>
+                            <option value="Homestay Double - Shared Bathroom">Homestay Double (Shared Bathroom)</option>
+                            <option value="Student Residence">Student Residence</option>
+                            <option value="None">No Accommodation Needed</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Start Date</label>
+                            <input type="date" class="form-control" name="StartDate" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Duration of Study</label>
+                            <input type="text" class="form-control" name="Duration" placeholder="e.g., 4 weeks" />
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">Other Notes / Requests</label>
+                        <textarea class="form-control" name="Notes" rows="3" placeholder="Any dietary requirements or special notes..."></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5 fw-bold shadow-sm">Send Request</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

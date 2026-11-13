@@ -1,39 +1,43 @@
 ﻿@{
-    ViewData["Title"] = "Study Better - About Us";
+    ViewData["Title"] = "Study Better Agency - About Us";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-    <style>
-    /* Add styles specific to the About Us page */
-    </style>
-</head>
-<body>
+<div class="container my-5">
+    <!-- Hero Header -->
+    <div class="text-center p-5 mb-5 rounded bg-dark text-white shadow-sm">
+        <h1 class="display-4 fw-bold">Study Better Agency — About Us</h1>
+        <p class="lead mt-3 text-light">Join us and discover what we can do for your educational journey in Cape Town.</p>
+        <a asp-controller="Pages" asp-action="Register" class="btn btn-lg fw-bold mt-3 px-4" style="background-color: #00C49F; color: #0F172A;">Get Started</a>
+    </div>
 
-    <!-- Holds the title and paragraph about the page -->
-    <section class="PageIntro">
-
-        <h1>About Us</h1>
-
-        <!-- Will be changed to have actual content relevant to the page -->
-        <!-- TODO get intro from client -->
-        <p>
-            Need a page that explains what their agency really does. Expand on the things not covered in the other pages and summarize the stuff that was. Then add links to the relevant pages to expand on it. Possibly make the about page the first one in the menu list. Must ask client to do write ups for website, we do not know the company like they do.
-        </p>
-
-    </section>
-    <!-- Page Intro -->
-
-    <!--? do we need pictures here-->
-
-    <!-- Footer -->
-    <footer>
-        Footer with relevant info
-    </footer>
-    <!-- Footer -->
-</body>
-</html>
+    <!-- Content Sections -->
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="p-4 border rounded shadow-sm h-100 bg-white">
+                <h3 class="fw-bold text-dark mb-3">Our Mission</h3>
+                <p class="text-muted">
+                    At Study Better Agency, our mission is to provide high-quality educational and placement services to students of all ages and backgrounds. We believe that education is the key to unlocking a brighter future and creating meaningful global opportunities.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-4 border rounded shadow-sm h-100 bg-white">
+                <h3 class="fw-bold text-dark mb-3">Experienced Educators</h3>
+                <p class="text-muted">
+                    Our team of experienced coordinators and academic partners are passionate about teaching and possess a wealth of knowledge in their respective fields, dedicated to helping students succeed and reach their full potential.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-12 mt-4">
+            <div class="p-4 border rounded shadow-sm bg-white text-center">
+                <h3 class="fw-bold text-dark mb-3">Personalised Learning and Support</h3>
+                <p class="text-muted w-75 mx-auto">
+                    We understand that every student is unique and has their own learning style and timeline. That's why we coordinate personalised learning pathways, homestay matching and continuous support every step of the way.
+                </p>
+                <div class="mt-4">
+                    <a asp-controller="Pages" asp-action="ContactUs" class="btn btn-outline-primary px-4 fw-bold">Contact Our Team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
