@@ -2,49 +2,145 @@
     ViewData["Title"] = "Study Better Agency - Registration Form";
 }
 
-<div class="container my-5">
-    <!-- Hero Banner -->
-    <div class="text-center p-5 mb-5 rounded shadow-sm text-dark" style="background-color: #f8961e;">
-        <h1 class="display-4 fw-bold">Registration Form</h1>
-        <p class="lead mt-2">Complete the form below to receive your customized quotation and secure your study placement.</p>
+<div class="container my-5 text-white">
+
+    <!-- Registration page start-->
+    <div class="mb-5">
+        <h1 class="display-5 fw-bold text-center text-white mb-5">Registration</h1>
+
+        <div class="row g-4">
+            <!-- some info added-->
+            <div class="col-md-4">
+                <div class="p-4 rounded-4 h-100 shadow-sm" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h5 class="fw-bold text-white mb-3">1. CHOOSE COURSE</h5>
+                    <ul class="text-white ps-3 mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        <li>Decide whether you would like:
+                            <div class="mt-1">a) General Course (15 hours per week)</div>
+                            <div>b) Intensive Course (23 hours per week)</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Accomodation info-->
+            <div class="col-md-4">
+                <div class="p-4 rounded-4 h-100 shadow-sm" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h5 class="fw-bold text-white mb-3">2. CHOOSE ACCOMMODATION</h5>
+                    <ul class="text-white ps-3 mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        <li>Decide whether or not you need accommodation arranged by us.
+                            <div class="mt-1">Options are:</div>
+                            <div>a) Host family</div>
+                            <div>b) Student residence</div>
+                            <div>c) Apartment</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Date option -->
+            <div class="col-md-4">
+                <div class="p-4 rounded-4 h-100 shadow-sm" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h5 class="fw-bold text-white mb-3">3. CHOOSE START DATE</h5>
+                    <ul class="text-white ps-3 mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        <li class="mb-2">Decide which month you would like to study.</li>
+                        <li>Decide on the duration of your studies (2 weeks up to 9 months).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="col-md-4">
+                <div class="p-4 rounded-4 h-100 shadow-sm" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h5 class="fw-bold text-white mb-3">4. SEND ENQUIRY</h5>
+                    <p class="text-white mb-2" style="opacity: 0.9;">Make the reservation in 3 ways:</p>
+                    <ul class="text-white ps-3 mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        <li>Complete the registration form below.</li>
+                        <li>Send information in Steps 1 to 3 to us via email to <a href="mailto:info@study-better.agency" class="text-info text-decoration-underline">info@study-better.agency</a></li>
+                        <li>Send us the information via WhatsApp.</li>
+                    </ul>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4">
+                <div class="p-4 rounded-4 h-100 shadow-sm" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h5 class="fw-bold text-white mb-3">5. QUOTATION AND PAYMENT</h5>
+                    <ul class="text-white ps-3 mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        <li class="mb-2">We will send a quotation.</li>
+                        <li class="mb-2">Accept the quote and make the payment.</li>
+                        <li>We will send you confirmation of your course and accommodation.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 rounded-4 h-100 shadow-sm" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h5 class="fw-bold text-white mb-3">6. VISA APPLICATION</h5>
+                    <ul class="text-white ps-3 mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        <li class="mb-2">If you need a study visa, then you can apply once you receive the school and accommodation confirmation letters.</li>
+                        <li>If you need assistance with applying for the visa, contact us and we will put you in touch with one of our partners.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Success Message Alert (triggers after form submit) -->
-    @if (Context.Request.Query["success"] == "true")
-    {
-        <div class="alert alert-success text-center py-4 shadow-sm mb-4" role="alert">
-            <h4 class="alert-heading fw-bold">Success! Your request has been successfully submitted.</h4>
-            <p class="mb-0">Thank you for registering with Study Better Agency. Our team will review your details and email your quotation shortly.</p>
+    <!-- Application tips section -->
+    <div class="row g-0 rounded-4 overflow-hidden shadow-lg mb-5" style="background-color: #2B74DD;">
+        <div class="col-lg-6 p-5 d-flex flex-column justify-content-center text-white">
+            <h2 class="display-6 fw-bold mb-4 text-white">Application Tips</h2>
+            <ol class="text-white ps-3 mb-0" style="font-size: 1.05rem; line-height: 1.8;">
+                <li class="mb-2">Always try to book more than a month in advance.</li>
+                <li class="mb-2">To increase the chances of securing your desired accomodation we suggest booking 3 months in advance.</li>
+                <li class="mb-2">Transfer fees are not applicable to those who pay in rands (ZAR)  via our online link</li>
+                <li class="mb-2">Be on gthe look out for promotions posted on our social media pages throughout the year.</li>
+                <li>Staying with a host family is a great way to practice your English and get introduced to everyday Cape Town living.</li>
+            </ol>
         </div>
-    }
+        <div class="col-lg-6 d-flex align-items-center justify-content-center p-4" style="background-color: #e2e8f0;">
+            <!-- Helpful tips Sticky Note Visual -->
+            <div class="p-5 shadow rounded-2 text-dark w-75" style="background-color: #fef08a; transform: rotate(-1deg); font-family: 'Comic Sans MS', cursive, sans-serif;">
+                <h2 class="fw-bold mb-4 text-center" style="font-size: 2.2rem;">Helpful Tips</h2>
+                <div class="fs-4 fw-bold mb-2">1. Book Early </div>
+                <div class="fs-4 fw-bold mb-2">2. Pay in Rands </div>
+                <div class="fs-4 fw-bold">3. Try a Host family stay </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Registration Form Card -->
+    <!-- Registration form banner -->
+    <div class="text-center p-5 mb-5 rounded-4 shadow-sm text-dark" style="background-color: #f8961e;">
+        <h1 class="display-4 fw-bold">Registration Form</h1>
+        <p class="lead mt-2 fw-medium">Complete the form below to receive your customized quotation and secure your study placement.</p>
+    </div>
+
+    <!--Registration form card -->
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <div class="card border-0 shadow-sm p-4 bg-white rounded">
-                <form asp-controller="Pages" asp-action="SubmitRegistration" method="post">
+            <div class="card border-0 shadow-lg p-4 p-md-5 bg-white text-dark rounded-4">
+                <form id="registrationForm">
                     
                     <div class="mb-3">
-                        <label class="form-label fw-bold">Full Name</label>
-                        <input type="text" class="form-control" name="FullName" placeholder="Enter your full name" required />
+                        <label class="form-label fw-bold text-dark">Full Name *</label>
+                        <input type="text" class="form-control" id="regFullName" name="FullName" placeholder="Enter your full name" required />
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label fw-bold">Email Address *</label>
-                        <input type="email" class="form-control" name="Email" placeholder="name@example.com" required />
+                        <label class="form-label fw-bold text-dark">Email Address *</label>
+                        <input type="email" class="form-control" id="regEmail" name="Email" placeholder="name@example.com" required />
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label fw-bold">Phone Number</label>
-                        <input type="tel" class="form-control" name="Phone" placeholder="+27 ..." />
+                        <label class="form-label fw-bold text-dark">Phone Number</label>
+                        <input type="tel" class="form-control" id="regPhone" name="Phone" placeholder="+27 ..." />
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label fw-bold">Course Selection</label>
-                        <select class="form-select" name="Course">
-                            <option selected>Select an English Course...</option>
-                            <option value="General English">General English (20 lessons/week)</option>
-                            <option value="Intensive English">Intensive English (30 lessons/week)</option>
+                        <label class="form-label fw-bold text-dark">Course Selection</label>
+                        <select class="form-select" id="regCourse" name="Course">
+                            <option value="Not specified" selected>Select an English Course...</option>
+                            <option value="General English (15 hrs/week)">General English (15 hours/week)</option>
+                            <option value="Intensive English (23 hrs/week)">Intensive English (23 hours/week)</option>
                             <option value="IELTS Preparation">IELTS Exam Preparation</option>
                             <option value="Business English">Business English</option>
                             <option value="Private Lessons">Private One-on-One Lessons</option>
@@ -52,39 +148,106 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label fw-bold">Accommodation Type</label>
-                        <select class="form-select" name="Accommodation">
-                            <option selected>Select accommodation preference...</option>
-                            <option value="Homestay Single - Shared Bathroom">Homestay Single (Shared Bathroom)</option>
-                            <option value="Homestay Single - Private Bathroom">Homestay Single (Private Bathroom)</option>
-                            <option value="Homestay Double - Shared Bathroom">Homestay Double (Shared Bathroom)</option>
+                        <label class="form-label fw-bold text-dark">Accommodation Type</label>
+                        <select class="form-select" id="regAccommodation" name="Accommodation">
+                            <option value="Not specified" selected>Select accommodation preference...</option>
+                            <option value="Host Family">Host Family</option>
                             <option value="Student Residence">Student Residence</option>
+                            <option value="Apartment">Apartment</option>
                             <option value="None">No Accommodation Needed</option>
                         </select>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label fw-bold">Start Date</label>
-                            <input type="date" class="form-control" name="StartDate" />
+                            <label class="form-label fw-bold text-dark">Start Date</label>
+                            <input type="date" class="form-control" id="regStartDate" name="StartDate" />
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label fw-bold">Duration of Study</label>
-                            <input type="text" class="form-control" name="Duration" placeholder="e.g., 4 weeks" />
+                            <label class="form-label fw-bold text-dark">Duration of Study</label>
+                            <input type="text" class="form-control" id="regDuration" name="Duration" placeholder="e.g., 4 weeks" />
                         </div>
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label fw-bold">Other Notes / Requests</label>
-                        <textarea class="form-control" name="Notes" rows="3" placeholder="Any dietary requirements or special notes..."></textarea>
+                        <label class="form-label fw-bold text-dark">Other Notes / Requests</label>
+                        <textarea class="form-control" id="regNotes" name="Notes" rows="3" placeholder="Any dietary requirements or special notes..."></textarea>
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-lg px-5 fw-bold shadow-sm">Send Request</button>
+                        <button type="submit" id="submitBtn" class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill shadow">
+                            Send Request
+                        </button>
                     </div>
 
                 </form>
             </div>
         </div>
     </div>
+
 </div>
+
+<!-- created a simulated email just to generate a sucessful submission pop up message. -->
+<div class="modal fade" id="submissionSuccessModal" tabindex="-1" aria-labelledby="submissionSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg rounded-4 text-dark">
+            <div class="modal-header border-0 pb-0 justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center px-4 pb-5 pt-2">
+                <div class="mx-auto mb-3 rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px; background-color: #dcfce7; color: #16a34a; font-size: 2.5rem;">
+                    ✓
+                </div>
+                <h3 class="fw-bold mb-2" id="submissionSuccessModalLabel">Successfully Submitted!</h3>
+                <p class="text-muted mb-3">
+                    Thank you, <span id="modalApplicantName" class="fw-bold text-dark"></span>! Your registration enquiry has been sent to <strong>info@study-better.agency</strong>.
+                </p>
+                <div class="p-3 rounded-3 mb-4 text-start small" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                    <div><strong>Email:</strong> <span id="modalApplicantEmail"></span></div>
+                    <div><strong>Course:</strong> <span id="modalApplicantCourse"></span></div>
+                    <div><strong>Accommodation:</strong> <span id="modalApplicantAccomm"></span></div>
+                </div>
+                <p class="small text-secondary mb-4">Our team will review your details and email your customized quotation shortly.</p>
+                <button type="button" class="btn btn-primary px-5 py-2 fw-bold rounded-pill" data-bs-dismiss="modal">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent actual backend post so no database or Firebase is needed
+
+            const submitBtn = document.getElementById('submitBtn');
+            const originalBtnText = submitBtn.innerHTML;
+
+            // Show simulated sending spinner
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending Email...';
+
+            // Grab form values to personalise the pop-up
+            const fullName = document.getElementById('regFullName').value;
+            const email = document.getElementById('regEmail').value;
+            const course = document.getElementById('regCourse').value;
+            const accommodation = document.getElementById('regAccommodation').value;
+
+            
+            setTimeout(function () {
+                document.getElementById('modalApplicantName').textContent = fullName;
+                document.getElementById('modalApplicantEmail').textContent = email;
+                document.getElementById('modalApplicantCourse').textContent = course;
+                document.getElementById('modalApplicantAccomm').textContent = accommodation;
+
+                // Reset button and form
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                document.getElementById('registrationForm').reset();
+
+                // Trigger Bootstrap Modal Pop-up
+                const successModal = new bootstrap.Modal(document.getElementById('submissionSuccessModal'));
+                successModal.show();
+            }, 1200);
+        });
+    </script>
+}

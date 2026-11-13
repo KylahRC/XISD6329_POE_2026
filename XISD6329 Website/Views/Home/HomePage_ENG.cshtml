@@ -1,168 +1,169 @@
 ﻿@{
-    ViewData["Title"] = "Study Better - Home";
+    ViewData["Title"] = "Study Better Agency - Home";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<style>
+    body {
+        background-color: #060d1f !important;
+        color: #ffffff !important;
+    }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
+    .playful-hero-title {
+        font-family: 'Comic Sans MS', 'Bubblegum Sans', 'Segoe UI', cursive, sans-serif;
+        letter-spacing: 0.5px;
+        color: #ffffff !important;
+    }
 
+    .clean-section-title {
+        color: #ffffff !important;
+        letter-spacing: 1px;
+    }
 
-    <style>
-        /* Add styles specific to the Home page */
+    .bright-white-text {
+        color: #ffffff !important;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+</style>
 
-        .ColourBlocks 
-        {
-            display: flex;
-            justify-content: space-between; /* make space between blocks even */
-            flex-wrap: wrap; /* stack vertical when small screen */
-            width: 100%;
-            padding: 40px 20px;
-            gap: 20px; /* set space between blocks */
-        }
+<div class="container my-4 text-white">
 
-        .block 
-        {
-            flex: 1 1 30%; /* percent based on 1440x1220 Figma design */
-            min-width: 280px; /* when to stack */
-            height: 503px;
-            display: flex;
-            flex-direction: column; /* set to vertical (column)*/
-            align-items: center;
-            justify-content: flex-start; 
-            color: black; /* text colour, not bg*/
-            font-size: 20px;
-            background: #D9D9D9; /* block default background colour, in line override per block */
-            box-shadow: 0 10px 4px rgba(0,0,0,0.25);
-        }
-
-            .block img 
-            {
-                width: 85%;
-                height: auto;
-                margin-top: 20px;
-                background: #D9D9D9; /* image background colour when no image, for debug */
-            }
-
-            .block h2 
-            {
-                margin-top: 20px;
-                font-size: 36px;
-            }
-
-            .block button 
-            {
-                margin-top: auto;
-                margin-bottom: 20px;
-                width: 70%;
-                height: 52px;
-                font-size: 20px;
-                /* TODO find better colour for button */
-                background: #D9D9D9; /* button background colour */
-                border: none;
-                cursor: pointer;
-                box-shadow: 0 10px 4px rgba(0,0,0,0.25);
-            }
-    </style>
-</head>
-
-<body>
-    <!-- Holds the title and paragraph about the page -->
-    <section class="PageIntro">
-        
-        <h1>Welcome</h1>
-
-        <p>
-            <!-- Will be changed to have actual content relevant to the page -->
-            <!-- TODO Write actual intro -->
-            Introductory paragraph about the agency and what you offer so the client understands somewhat of what the purpose of the agency is and therefore can make an informed choice about which demographic their needs fall into.
-        </p>
-
-    </section>
-    <!-- Page Intro -->
-
-    <!-- Holds the 3 colour blocks that split into the demo pages -->
-    <div class="ColourBlocks"> 
-
-        <!-- Private demo ad -->
-        <div class="block" style="background:#2B74DD">
-
-            <!-- TODO Insert desired photo relevent to private demographic -->
-            <!-- TODO Find private image -->
-            <img src="https://placehold.co/272x166" alt="Private photo">
-
-            <!-- Private demo title, must hook clients -->
-            <!-- TODO Get title for private demo from client -->
-            <h2>Targeting private demographic</h2>
-
-            <!-- Private demo flavor text, further hook the client -->
-            <!-- TODO Get flavor text for private demo from client -->
-            <p>About private english</p>
-
-            <!-- Button to take user to private demo page -->
-            <!-- TODO Style and link the button -->
-            <button>Go to PrivateDemo.cshtml</button>
-
+    <!-- 1. Hero Section (Playful Title Only + Bright White Text) -->
+    <div class="row align-items-center py-5 mb-5 rounded-4 shadow-lg" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="col-lg-7 px-5">
+            <h1 class="display-4 fw-bold playful-hero-title mb-4"> UNLOCK YOUR FUTURE WITH ENGLISH </h1>
+            <p class="lead bright-white-text mb-4">
+                English is no longer just a language. It’s a requirement for better jobs, career promotions, international opportunities and university admission. Whether you want to advance in your career or study abroad, we help you succeed every step of the way.
+            </p>
+            <div class="mt-4">
+                <a asp-controller="Pages" asp-action="Register" class="btn text-white fw-bold rounded-circle d-inline-flex align-items-center justify-content-center shadow-lg" style="width: 140px; height: 140px; background-color: #2563eb; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s;">
+                    BOOK NOW
+                </a>
+            </div>
         </div>
-        <!-- Private demo ad -->
-
-        <!-- Corporate demo ad -->
-        <div class="block" style="background:#E3AF20">
-
-            <!-- TODO Insert desired photo relevent to corporate demographic -->
-            <!-- TODO Find corporate image -->
-            <img src="https://placehold.co/272x166" alt="Corporate photo">
-
-            <!-- Corporate demo title, catch employers eye -->
-            <!-- TODO Get title for corporate demo from client -->
-            <h2>Targeting Companies</h2>
-
-            <!-- Corporate demo flavor text, make employer feel it will be net positive -->
-            <!-- TODO Get flavor text for corporate demo from client -->
-            <p>Appeal to corporate</p>
-
-            <!-- Button to take user to corporate demo page -->
-            <!-- TODO Style and link the button to CorporateDemo.cshtml -->
-            <button>Go to CorporateDemo.cshtml</button>
-
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+            <img src="~/images/sba-logo.png" alt="Study Better Agency" class="img-fluid p-3" style="max-height: 280px;" />
         </div>
-        <!--  -->
-
-        <!-- Government demo ad -->
-        <div class="block" style="background:#E86666">
-
-            <!-- TODO Insert desired photo relevent to government demographic -->
-            <!-- TODO Find government image -->
-            <img src="https://placehold.co/272x166" alt="Government photo">
-
-            <!-- Government demo title, catch government eye -->
-            <!-- TODO Get title for gov demo from client -->
-            <h2>Target Government</h2>
-
-
-            <!-- Government demo flavor text, explain why they should do this -->
-            <!-- TODO Get flavor text for government demo from client -->
-            <p>Government related image</p>
-
-
-            <!-- Button to take user to government demo page -->
-            <!-- TODO Style and link the button to GovernmentDemo.cshtml -->
-            <button>Go to GovernmentDemo.cshtml</button>
-
-        </div> 
-        <!-- Government demo ad -->
-
     </div>
-    <!-- Colour blocks -->
 
-    <!-- Footer, self explanatory -->
-    <footer>
-        Footer with relevant info
-    </footer>
-    <!-- Footer -->
+    <!-- 2. Suitable For / Demographic Target Blocks -->
+    <div class="my-5">
+        <h2 class="text-center fw-bold mb-4 clean-section-title">SUITABLE FOR</h2>
+        
+        <div class="row g-4">
+            <!-- Private -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow p-4 rounded-4 text-center" style="background-color: #2B74DD; color: #ffffff;">
+                    <div class="mx-auto mb-3 rounded-circle overflow-hidden shadow-sm bg-white d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
+                        <img src="https://placehold.co/272x166" alt="Private photo" class="img-fluid" />
+                    </div>
+                    <h3 class="h4 fw-bold mb-3 text-white">Private Demographic</h3>
+                    <p class="small mb-4 text-white">Improve daily communication, meet international friends, and experience vibrant student life in Cape Town with homestay options.</p>
+                    <div class="mt-auto">
+                        <a asp-controller="Pages" asp-action="Services" class="btn btn-light text-primary fw-bold px-4 py-2 rounded-pill shadow-sm">Explore Services</a>
+                    </div>
+                </div>
+            </div>
 
-</body>
-</html>
+            <!-- Corporate -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow p-4 rounded-4 text-center" style="background-color: #E3AF20; color: #ffffff;">
+                    <div class="mx-auto mb-3 rounded-circle overflow-hidden shadow-sm bg-white d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
+                        <img src="https://placehold.co/272x166" alt="Corporate photo" class="img-fluid" />
+                    </div>
+                    <h3 class="h4 fw-bold mb-3 text-white">Companies</h3>
+                    <p class="small mb-4 text-white">Boost your company's global capacity, professional writing, and workplace confidence with specialized corporate training.</p>
+                    <div class="mt-auto">
+                        <a asp-controller="Pages" asp-action="Services" class="btn btn-dark text-white fw-bold px-4 py-2 rounded-pill shadow-sm">Corporate Services</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Government -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow p-4 rounded-4 text-center" style="background-color: #E86666; color: #ffffff;">
+                    <div class="mx-auto mb-3 rounded-circle overflow-hidden shadow-sm bg-white d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
+                        <img src="https://placehold.co/272x166" alt="Government photo" class="img-fluid" />
+                    </div>
+                    <h3 class="h4 fw-bold mb-3 text-white">Governments</h3>
+                    <p class="small mb-4 text-white">Structured, accredited language pathways designed for public sector advancement, international delegations, and official compliance.</p>
+                    <div class="mt-auto">
+                        <a asp-controller="Pages" asp-action="Services" class="btn btn-light text-danger fw-bold px-4 py-2 rounded-pill shadow-sm">Institutional Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Additional Content Sections (All White Text on Dark Navy) -->
+    <div class="my-5 py-4 border-top border-secondary">
+        <div class="row g-5 align-items-center mb-5">
+            <div class="col-md-6 text-center">
+                <div class="mx-auto rounded-circle overflow-hidden shadow-sm d-flex align-items-center justify-content-center bg-white" style="width: 250px; height: 250px;">
+                    <img src="https://placehold.co/272x166" alt="Courses" class="img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold clean-section-title">English Courses</h3>
+                <p class="bright-white-text mt-2">
+                    Whether you're learning English for work, university, travel, or immigration, Study Better Agency offers high-quality English programmes designed to help you achieve your goals. We partner with carefully selected language schools in Cape Town that are known for excellent teaching, student support, and outstanding results.
+                </p>
+                <div class="mt-3">
+                    <a asp-controller="Pages" asp-action="OnlineEnglishClasses" class="btn btn-primary px-4 fw-bold rounded-pill">Courses</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 align-items-center mb-5">
+            <div class="col-md-6 order-md-2 text-center">
+                <div class="mx-auto rounded-circle overflow-hidden shadow-sm d-flex align-items-center justify-content-center bg-white" style="width: 250px; height: 250px;">
+                    <img src="https://placehold.co/272x166" alt="Registration" class="img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h3 class="fw-bold clean-section-title">Registration Process</h3>
+                <p class="bright-white-text mt-2">
+                    Registration is quick and easy. Complete the online form and we will send you a quotation. Once you accepted the quotation, payment gets made. We then send you the invitation letters needed confirming your registration. Some countries get 30 or 90 days visa on arrival. If you need help applying, contact us.
+                </p>
+                <div class="mt-3">
+                    <a asp-controller="Pages" asp-action="Register" class="btn btn-primary px-4 fw-bold rounded-pill">Register Here</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 align-items-center mb-5">
+            <div class="col-md-6 text-center">
+                <div class="mx-auto rounded-circle overflow-hidden shadow-sm d-flex align-items-center justify-content-center bg-white" style="width: 250px; height: 250px;">
+                    <img src="https://placehold.co/272x166" alt="Flight" class="img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold clean-section-title">Book Your Flight</h3>
+                <p class="bright-white-text mt-2">
+                    Book your flight with Study Better Agency and Satguru Travel. Click below to qualify for competitive rates. One way help our clients save. We make your journey simple by assisting with flights and helping you arrange the medical cover required for your studies.
+                </p>
+                <div class="mt-3">
+                    <a asp-controller="Pages" asp-action="FlightsAndMedical" class="btn btn-primary px-4 fw-bold rounded-pill">Book Flight</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 align-items-center mb-5">
+            <div class="col-md-6 order-md-2 text-center">
+                <div class="mx-auto rounded-circle overflow-hidden shadow-sm d-flex align-items-center justify-content-center bg-white" style="width: 250px; height: 250px;">
+                    <img src="https://placehold.co/272x166" alt="TEFL" class="img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h3 class="fw-bold clean-section-title">Become an English Teacher</h3>
+                <p class="bright-white-text mt-2">
+                    We now offer an internationally recognized TEFL (Teaching English as a Foreign Language) course. Gain certification and open doors to teaching English overseas or online.
+                </p>
+                <div class="mt-3">
+                    <a asp-controller="Pages" asp-action="TEFLInstitute" class="btn btn-primary px-4 fw-bold rounded-pill">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

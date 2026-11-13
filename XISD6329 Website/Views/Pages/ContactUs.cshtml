@@ -1,46 +1,134 @@
 ﻿@{
-    ViewData["Title"] = "Study Better - Contact Us";
+    ViewData["Title"] = "Study Better Agency - Contact Us";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/site.css" />
+<div class="container my-5 text-white" style="max-width: 800px;">
 
-    <style>
-/* Add styles specific to the Contact Us page */
-    </style>
-</head>
-<body>
+    <!--Page  header -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-white mb-2">CONTACT US</h1>
+        <p class="lead text-light" style="opacity: 0.85;">Drop us a line and we will get back to you shortly!</p>
+    </div>
 
-    <!-- Holds the title and paragraph about the page -->
-    <section class="PageIntro">
-        <h1>Contact Us</h1>
 
-        <!-- Will be changed to have actual content relevant to the page -->
-        <!-- TODO Get info from client, dont write for them (legal reasons) -->
-        <!-- TODO design form -->
-        <!-- TODO document store and download funcion -->
-        <p>
-            Have the contact details and forms here where possible.
-            Have links to here in other pages where needed.
-            <!--? make downloadable form into online form -->
-            Make the form interesting and SUPER easy to use.
-            Functionality will be tricky but we will figure it out, probably.
+    <div class="p-4 p-md-5 rounded-4 shadow-lg mb-5 text-center" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <p class="mb-2 text-light" style="font-size: 1.1rem;">
+            <strong>Email:</strong> <a href="mailto:info@study-better.agency" class="text-info text-decoration-none">info@study-better.agency</a>
         </p>
-    </section>
-    <!-- Page Intro -->
+        <p class="mb-4 text-light" style="font-size: 1.1rem;">
+            <strong>Phone/WhatsApp:</strong> +27 837749810
+        </p>
+        <div>
+            <a href="https://wa.me/27837749810" target="_blank" class="btn text-white fw-bold px-4 py-3 rounded-pill shadow-sm" style="background-color: #25d366; font-size: 1rem;">
+                 Message us on WhatsApp
+            </a>
+        </div>
+    </div>
 
-    <!-- TODO make form-->
-    <!--? should form be coloured in RYB or whiteish -->
+ 
+    <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1) !important;">
+        <h3 class="fw-bold text-white mb-4 text-center">DROP US A LINE!</h3>
+        
+        <form id="contactForm">
+            
+            <div class="mb-3">
+                <label class="form-label fw-bold text-white">Name</label>
+                <input type="text" class="form-control bg-dark text-white border-secondary" id="contactName" placeholder="Your name" required />
+            </div>
 
-    <!-- Footer -->
-    <footer>
-        Footer with relevant info
-    </footer>
-    <!-- Footer -->
-</body>
-</html>
+            <div class="mb-3">
+                <label class="form-label fw-bold text-white">Email*</label>
+                <input type="email" class="form-control bg-dark text-white border-secondary" id="contactEmail" placeholder="name@example.com" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold text-white">Phone</label>
+                <input type="tel" class="form-control bg-dark text-white border-secondary" id="contactPhone" placeholder="+27 ..." />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold text-white">I'm interested in</label>
+                <textarea class="form-control bg-dark text-white border-secondary" id="contactInterested" rows="3" placeholder="Tell us what courses or services you are interested in..."></textarea>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold text-white">Other notes</label>
+                <textarea class="form-control bg-dark text-white border-secondary" id="contactNotes" rows="3" placeholder="Any additional questions or requirements..."></textarea>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" id="contactSubmitBtn" class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill shadow w-100" style="background-color: #2563eb;">
+                    SEND
+                </button>
+            </div>
+
+            <div class="text-center mt-3">
+                <small class="text-muted" style="font-size: 0.75rem;">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</small>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+<!-- Created a similar simulation for pop up sucessful notification -->
+<div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-labelledby="contactSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg rounded-4 text-dark">
+            <div class="modal-header border-0 pb-0 justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center px-4 pb-5 pt-2">
+                <div class="mx-auto mb-3 rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px; background-color: #dcfce7; color: #16a34a; font-size: 2.5rem;">
+                    ✓
+                </div>
+                <h3 class="fw-bold mb-2" id="contactSuccessModalLabel">Message Sent!</h3>
+                <p class="text-muted mb-3">
+                    Thank you, <span id="modalContactName" class="fw-bold text-dark"></span>! Your message has been sent successfully to Study Better Agency.
+                </p>
+                <div class="p-3 rounded-3 mb-4 text-start small" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                    <div><strong>Email:</strong> <span id="modalContactEmail"></span></div>
+                    <div><strong>Phone:</strong> <span id="modalContactPhone"></span></div>
+                </div>
+                <p class="small text-secondary mb-4">We will review your inquiry and get back to you shortly.</p>
+                <button type="button" class="btn btn-primary px-5 py-2 fw-bold rounded-pill" data-bs-dismiss="modal">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            const originalText = submitBtn.innerHTML;
+
+            // loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...';
+
+            // Grab field values
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const phone = document.getElementById('contactPhone').value || 'Not provided';
+
+            // Simulate network response 
+            setTimeout(function () {
+                document.getElementById('modalContactName').textContent = name;
+                document.getElementById('modalContactEmail').textContent = email;
+                document.getElementById('modalContactPhone').textContent = phone;
+
+                // Reset form and button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                document.getElementById('contactForm').reset();
+
+                // Show success modal
+                const modal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
+                modal.show();
+            }, 1200);
+        });
+    </script>
+}

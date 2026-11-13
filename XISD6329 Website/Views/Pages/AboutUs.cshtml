@@ -2,42 +2,68 @@
     ViewData["Title"] = "Study Better Agency - About Us";
 }
 
-<div class="container my-5">
+<div class="container my-4 text-white">
+
     <!-- Hero Header -->
-    <div class="text-center p-5 mb-5 rounded bg-dark text-white shadow-sm">
-        <h1 class="display-4 fw-bold">Study Better Agency — About Us</h1>
-        <p class="lead mt-3 text-light">Join us and discover what we can do for your educational journey in Cape Town.</p>
-        <a asp-controller="Pages" asp-action="Register" class="btn btn-lg fw-bold mt-3 px-4" style="background-color: #00C49F; color: #0F172A;">Get Started</a>
+    <div class="p-5 mb-5 rounded-4 shadow-lg d-flex flex-column flex-lg-row align-items-center justify-content-between" style="background-color: #2B74DD;">
+        <div class="text-start mb-4 mb-lg-0">
+            <h1 class="display-5 fw-bold text-white mb-2">STUDY BETTER AGENCY — ABOUT US</h1>
+            <p class="lead text-white mb-0" style="opacity: 0.9;">Join us and discover what we can do for you.</p>
+        </div>
+        <div>
+            <a href="#contactSection" class="btn btn-light fw-bold px-5 py-3 rounded-pill shadow-sm text-dark" style="font-size: 1.05rem;">
+                GET STARTED
+            </a>
+        </div>
     </div>
 
-    <!-- Content Sections -->
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="p-4 border rounded shadow-sm h-100 bg-white">
-                <h3 class="fw-bold text-dark mb-3">Our Mission</h3>
-                <p class="text-muted">
+    <!-- Content and Visual Layout Section -->
+    <div class="row g-5 align-items-center mb-5">
+        
+        <!-- Left Column: Mission and Info Blocks -->
+        <div class="col-lg-6">
+            <div class="mb-4 p-4 rounded-4 shadow-sm" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.08);">
+                <h3 class="fw-bold mb-3 text-white">Our Mission</h3>
+                <p class="text-light mb-0" style="opacity: 0.85; line-height: 1.7;">
                     At Study Better Agency, our mission is to provide high-quality educational and placement services to students of all ages and backgrounds. We believe that education is the key to unlocking a brighter future and creating meaningful global opportunities.
                 </p>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="p-4 border rounded shadow-sm h-100 bg-white">
-                <h3 class="fw-bold text-dark mb-3">Experienced Educators</h3>
-                <p class="text-muted">
+
+            <div class="mb-4 p-4 rounded-4 shadow-sm" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.08);">
+                <h3 class="fw-bold mb-3 text-white">Experienced Educators</h3>
+                <p class="text-light mb-0" style="opacity: 0.85; line-height: 1.7;">
                     Our team of experienced coordinators and academic partners are passionate about teaching and possess a wealth of knowledge in their respective fields, dedicated to helping students succeed and reach their full potential.
                 </p>
             </div>
         </div>
-        <div class="col-md-12 mt-4">
-            <div class="p-4 border rounded shadow-sm bg-white text-center">
-                <h3 class="fw-bold text-dark mb-3">Personalised Learning and Support</h3>
-                <p class="text-muted w-75 mx-auto">
-                    We understand that every student is unique and has their own learning style and timeline. That's why we coordinate personalised learning pathways, homestay matching and continuous support every step of the way.
-                </p>
-                <div class="mt-4">
-                    <a asp-controller="Pages" asp-action="ContactUs" class="btn btn-outline-primary px-4 fw-bold">Contact Our Team</a>
-                </div>
+
+        <!-- Right Column: Visual Picture and Imagery Section -->
+        <div class="col-lg-6 text-center">
+            <div class="p-3 rounded-4 shadow-lg" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.08);">
+                <img src="https://placehold.co/600x450/1e293b/ffffff?text=Study+Better+Agency+Cape+Town" alt="About Study Better" class="img-fluid rounded-3 shadow-sm w-100" style="max-height: 400px; object-fit: cover;" />
+                <p class="text-muted small mt-3 mb-1">Empowering students through guidance, support, and excellence in Cape Town.</p>
             </div>
         </div>
+
     </div>
+
+    <!-- 3. Personalised Learning and Support Section -->
+    <div class="mb-5 p-5 rounded-4 shadow-sm text-center" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.08);">
+        <h3 class="fw-bold mb-3 text-white">Personalised Learning and Support</h3>
+        <p class="text-light w-75 mx-auto mb-4" style="opacity: 0.85; line-height: 1.7;">
+            We understand that every student is unique and has their own learning style and timeline. That's why we coordinate personalised learning pathways, homestay matching and continuous support every step of the way.
+        </p>
+    </div>
+
+    <!-- Contact Our Team Box (Scroll Target for 'Get Started' button) -->
+    <div id="contactSection" class="p-5 rounded-4 shadow-lg text-center mb-5" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 2px solid #2B74DD;">
+        <h3 class="fw-bold mb-3 text-white">Ready to Begin Your Journey?</h3>
+        <p class="text-light mb-4 w-75 mx-auto" style="opacity: 0.9;">
+            Get in touch with our team today to find out more about our programs, accommodation options and how we can assist you.
+        </p>
+        <a asp-controller="Pages" asp-action="ContactUs" class="btn btn-primary px-5 py-3 fw-bold rounded-pill shadow">
+            Contact Our Team
+        </a>
+    </div>
+
 </div>

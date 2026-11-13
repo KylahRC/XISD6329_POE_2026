@@ -8,48 +8,70 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/XISD6329_Website.styles.css" asp-append-version="true" />
     <style>
-            #mainNav {
-                position: sticky;
-                top: 0;
-                z-index: 1030;
-                background-color: rgba(15, 23, 42, 0.88);
-                backdrop-filter: blur(12px);
-                transition: all 0.3s ease-in-out;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
+        #mainNav {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-            #navLogo {
-                height: 110px;
-                width: auto;
-                transition: height 0.3s ease-in-out;
-            }
+        /* Made the logo significantly bigger */
+        #navLogo {
+            height: 140px;
+            width: auto;
+            transition: height 0.3s ease-in-out;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
 
-            #mainNav.navbar-shrink {
-                padding-top: 0.4rem !important;
-                padding-bottom: 0.4rem !important;
-                background-color: rgba(15, 23, 42, 0.96) !important;
-            }
+        #mainNav.navbar-shrink {
+            padding-top: 0.4rem !important;
+            padding-bottom: 0.4rem !important;
+            background-color: rgba(15, 23, 42, 0.98) !important;
+        }
 
-                #mainNav.navbar-shrink #navLogo {
-                    height: 55px;
-                }
+        #mainNav.navbar-shrink #navLogo {
+            height: 65px; /* Shrinks nicely when scrolling down */
+        }
 
-            #mainNav .nav-link {
-                color: #ffffff !important;
-                transition: color 0.2s ease-in-out;
-            }
+        #mainNav .nav-link {
+            color: #ffffff !important;
+            transition: color 0.2s ease-in-out;
+        }
 
-                #mainNav .nav-link:hover {
-                    color: #00C49F !important;
-                }
+        #mainNav .nav-link:hover {
+            color: #00C49F !important;
+        }
+
+        #scrollLettersLogo {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            height: 100px;
+            width: auto;
+            z-index: 9999;
+            opacity: 0;
+            transform: scale(0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            pointer-events: none;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+        }
+        #scrollLettersLogo.show-logo {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark px-4 py-3">
-            <div class="container-fluid">
+            <div class="container-fluid position-relative">
+                
                 <!-- Left Nav Links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item px-2">
@@ -63,16 +85,16 @@
                     </li>
                 </ul>
 
-                <!--  Logo -->
-                <a class="navbar-brand mx-auto text-center" asp-controller="Home" asp-action="HomePage_ENG">
+                <!-- Perfectly Centered Larger Logo -->
+                <a class="navbar-brand position-absolute start-50 translate-middle-x text-center p-0 m-0" asp-controller="Home" asp-action="HomePage_ENG">
                     <img id="navLogo" src="~/images/sba-logo.png" alt="Study Better Agency Logo" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
               
+                <!-- Right Dropdown Menu -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item dropdown px-2">
@@ -90,11 +112,9 @@
                                 <li><a class="dropdown-item py-2" asp-controller="Pages" asp-action="TEFLInstitute">TEFL Institute</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item ms-3">
-                            <a class="btn fw-bold px-4 py-2 shadow-sm" style="background-color: #00C49F; color: #0F172A;" asp-controller="Pages" asp-action="ContactUs">Contact Us</a>
-                        </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
@@ -105,27 +125,33 @@
         </main>
     </div>
 
-    <!-- Added a persistent Contact Us link -->
-    <footer class="border-top footer text-muted mt-5 py-4 bg-light">
-        <div class="container text-center">
-            &copy; 2026 - Study Better Agency |
-            <a asp-controller="Pages" asp-action="ContactUs" class="fw-bold text-decoration-none text-primary ms-1">Contact Us</a> |
-            <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <!-- Dark Navy Discrete Footer -->
+    <footer class="mt-5 py-3 text-center" style="background-color: #060d1f; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="container" style="font-size: 0.8rem; color: #94a3b8;">
+            &copy; 2026 - Study Better Agency | 
+            <a asp-controller="Pages" asp-action="ContactUs" class="text-decoration-none mx-1" style="color: #94a3b8;">Contact Us</a> | 
+            <a asp-controller="Home" asp-action="Privacy" class="text-decoration-none ms-1" style="color: #94a3b8;">Privacy</a>
         </div>
     </footer>
+
+    <!-- Floating scroll letters logo -->
+    <img id="scrollLettersLogo" src="~/images/SBA Letters Logo.png" alt="SBA Letters Logo" />
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
-            window.addEventListener('scroll', function() {
-                const navbar = document.getElementById('mainNav');
-                if (window.scrollY > 50) {
-                    navbar.classList.add('navbar-shrink');
-                } else {
-                    navbar.classList.remove('navbar-shrink');
-                }
-            });
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNav');
+            const scrollLogo = document.getElementById('scrollLettersLogo');
+            if (window.scrollY > 80) {
+                navbar.classList.add('navbar-shrink');
+                scrollLogo.classList.add('show-logo');
+            } else {
+                navbar.classList.remove('navbar-shrink');
+                scrollLogo.classList.remove('show-logo');
+            }
+        });
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

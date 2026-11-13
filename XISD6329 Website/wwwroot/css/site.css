@@ -170,5 +170,15 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 36px;
-    color: white;
+    color: darkblue;
+}
+/* Global Dark Navy Theme */
+body {
+    background-color: #060d1f !important;
+    color: #ffffff !important;
+}
+
+/* Ensure container text stays white on home page */
+.container {
+    color: #ffffff !important;
 }

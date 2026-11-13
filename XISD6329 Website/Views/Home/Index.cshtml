@@ -2,49 +2,95 @@
     ViewData["Title"] = "Study Better Agency - Home";
 }
 
-<div class="text-center my-5">
-    <h1 class="display-4 fw-bold">Learn English. Create Opportunities. Change Your Life.</h1>
-    <p class="lead text-muted mt-3">Welcome to Study Better Agency. Choose your path below to explore our tailored programs in Cape Town.</p>
-</div>
+<div class="container my-4">
 
-<!-- Market Sector Cards Container -->
-<div class="row text-white mt-5">
-    
-    <!-- Private Demographic Card (Blue) -->
-    <div class="col-md-4 mb-4">
-        <div class="card h-100 bg-primary border-0 shadow">
-            <div class="card-body text-center d-flex flex-column justify-content-between p-4">
-                <div>
-                    <h3 class="card-title fw-bold">Learn English For Yourself</h3>
-                    <p class="card-text mt-3">Improve your daily communication, meet international friends, and experience vibrant student life in Cape Town with homestay options.</p>
-                </div>
-                <a asp-controller="Pages" asp-action="Accomodation" class="btn btn-light text-primary fw-bold mt-4">Explore Private Options</a>
+    <!-- 1. Hero Section: Unlock Your Future with English -->
+    <div class="row align-items-center py-5 mb-4 rounded shadow-sm" style="background-color: rgba(15, 23, 42, 0.03);">
+        <div class="col-lg-7 px-5">
+            <h1 class="display-4 fw-bold text-dark mb-4">UNLOCK YOUR FUTURE WITH ENGLISH</h1>
+            <p class="lead text-muted mb-4">
+                English is no longer just a language — it’s a requirement for better jobs, career promotions, international opportunities, and university admission. Whether you want to advance in your career or study abroad, we help you succeed every step of the way.
+            </p>
+            <div class="mt-4">
+                <a asp-controller="Pages" asp-action="Register" class="btn text-white fw-bold rounded-circle d-inline-flex align-items-center justify-content-center shadow" style="width: 140px; height: 140px; background-color: #2563eb; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s;">
+                    BOOK NOW
+                </a>
             </div>
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+            <img src="~/images/sba-logo.png" alt="Study Better Agency" class="img-fluid p-3" style="max-height: 280px;" />
         </div>
     </div>
 
-    <!-- Corporate Sector Card (Gold/Yellow) -->
-    <div class="col-md-4 mb-4">
-        <div class="card h-100 bg-warning text-dark border-0 shadow">
-            <div class="card-body text-center d-flex flex-column justify-content-between p-4">
-                <div>
-                    <h3 class="card-title fw-bold">Improve Employee English</h3>
-                    <p class="card-text mt-3">Boost your company's global capacity, professional writing, and workplace confidence with specialized corporate English training.</p>
+    <!-- 2. "Suitable For" Section (Target Cards in Circular Format) -->
+    <div class="my-5 py-3">
+        <h2 class="text-center fw-bold mb-5 text-dark">SUITABLE FOR</h2>
+        <div class="row text-center g-4">
+            
+            <!-- Private Demographic -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-4 bg-white rounded-4">
+                    <div class="mx-auto mb-3 rounded-circle overflow-hidden shadow-sm d-flex align-items-center justify-content-center" style="width: 180px; height: 180px; background-color: #eff6ff;">
+                        <span class="fw-bold text-primary fs-4">Private</span>
+                    </div>
+                    <h3 class="h5 fw-bold text-dark">Private Demographic</h3>
+                    <p class="text-muted small mt-2">Improve daily communication, meet international friends, and experience vibrant student life in Cape Town with homestay options.</p>
+                    <div class="mt-auto pt-3">
+                        <a asp-controller="Pages" asp-action="Accomodation" class="btn btn-outline-primary btn-sm fw-bold px-4 rounded-pill">Explore Options</a>
+                    </div>
                 </div>
-                <a asp-controller="Pages" asp-action="Services" class="btn btn-dark text-warning fw-bold mt-4">Corporate Programs</a>
             </div>
+
+            <!-- Corporate Sector -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-4 bg-white rounded-4">
+                    <div class="mx-auto mb-3 rounded-circle overflow-hidden shadow-sm d-flex align-items-center justify-content-center" style="width: 180px; height: 180px; background-color: #fef3c7;">
+                        <span class="fw-bold text-dark fs-4">Corporate</span>
+                    </div>
+                    <h3 class="h5 fw-bold text-dark">Corporate Sector</h3>
+                    <p class="text-muted small mt-2">Boost your company's global capacity, professional writing, and workplace confidence with specialized corporate training.</p>
+                    <div class="mt-auto pt-3">
+                        <a asp-controller="Pages" asp-action="Services" class="btn btn-outline-dark btn-sm fw-bold px-4 rounded-pill">Corporate Programs</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Government Sector -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-4 bg-white rounded-4">
+                    <div class="mx-auto mb-3 rounded-circle overflow-hidden shadow-sm d-flex align-items-center justify-content-center" style="width: 180px; height: 180px; background-color: #fee2e2;">
+                        <span class="fw-bold text-danger fs-4">Govt</span>
+                    </div>
+                    <h3 class="h5 fw-bold text-dark">Government Programmes</h3>
+                    <p class="text-muted small mt-2">Structured, accredited language pathways designed for public sector advancement, international delegations, and official compliance.</p>
+                    <div class="mt-auto pt-3">
+                        <a asp-controller="Pages" asp-action="ContactUs" class="btn btn-outline-danger btn-sm fw-bold px-4 rounded-pill">Institutional Enquiries</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- Government & Public Sector Card (Coral/Red) -->
-    <div class="col-md-4 mb-4">
-        <div class="card h-100 bg-danger border-0 shadow">
-            <div class="card-body text-center d-flex flex-column justify-content-between p-4">
-                <div>
-                    <h3 class="card-title fw-bold">Government Programmes</h3>
-                    <p class="card-text mt-3">Structured, accredited language pathways designed for public sector advancement, international delegations, and official compliance.</p>
+    <!-- 3. English Courses & Offerings Section -->
+    <div class="my-5 py-4 border-top">
+        <h2 class="text-center fw-bold mb-5 text-dark">ENGLISH COURSES & SERVICES</h2>
+        <div class="row align-items-center g-5">
+            <div class="col-md-6">
+                <h3 class="fw-bold text-dark">World-Class Language Programmes</h3>
+                <p class="text-muted mt-3">
+                    Whether you're learning English for work, university, travel, or immigration, Study Better Agency offers high-quality English programmes designed to help you achieve your goals. We partner with carefully selected language schools in Cape Town known for excellent teaching and student support.
+                </p>
+                <div class="mt-4">
+                    <a asp-controller="Pages" asp-action="OnlineEnglishClasses" class="btn btn-primary fw-bold px-4 py-2 shadow-sm">View Courses</a>
                 </div>
-                <a asp-controller="Pages" asp-action="ContactUs" class="btn btn-light text-danger fw-bold mt-4">Enquire for Institutions</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="p-5 rounded-4 shadow-sm text-white" style="background-color: #0F172A;">
+                    <h4 class="fw-bold">Ready to Start Your Journey?</h4>
+                    <p class="small text-light mt-2">Complete our quick online registration form to get an instant customized quotation.</p>
+                    <a asp-controller="Pages" asp-action="Register" class="btn fw-bold mt-3 px-4 py-2" style="background-color: #00C49F; color: #0F172A;">Register Now</a>
+                </div>
             </div>
         </div>
     </div>
