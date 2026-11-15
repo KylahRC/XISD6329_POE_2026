@@ -1,95 +1,128 @@
 ﻿@{
-    ViewData["Title"] = "Study Better - Services";
+    ViewData["Title"] = "Study Better Agency - Services";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/site.css" />
+<div class="container my-5 text-white">
 
-    <style>
-       /* Add styles specific to the Services page */
-        .services 
-        {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
 
-            .services h2 
-            {
-                font-size: 28px;
-                margin-bottom: 20px;
-                text-align: center;
-            }
-
-        .service-item 
-        {
-            margin-bottom: 20px;
-            background: #D9D9D9; /* default background, change using in line styles*/
-            color: black;
-            padding: 20px;
-            box-shadow: 0 10px 4px rgba(0,0,0,0.25);
-        }
-
-            .service-item h3 
-            {
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
-
-            .service-item p 
-            {
-                font-size: 18px;
-            }
-
-    </style>
-</head>
-<body>  
-
-    <!-- Holds the title and introductory paragraph about the Services page -->
-    <section class="PageIntro">
-        <h1>Services</h1>
-
-        <!-- TODO figure out how to style this-->
-        <p>
-            Current site is just a numbered list.
-            Maybe have headings for the things they do and then expand on those services properly.
+    <div class="p-5 mb-5 rounded-4 shadow-lg text-center" style="background-color: #2B74DD;">
+        <h1 class="display-4 fw-bold text-white mb-3">OUR SERVICES</h1>
+        <p class="lead text-white w-75 mx-auto mb-0" style="opacity: 0.92; line-height: 1.7;">
+            Tailored English education, travel logistics and international placement solutions for individuals, corporate teams and government institutions.
         </p>
-    </section>
-    <!-- PageIntro -->
+    </div>
 
-    <!-- Services section -->
-    <section class="services">
+    <!-- Three Target Demographic Pillars -->
+    <div class="mb-5">
+        <h2 class="display-6 fw-bold text-center text-white mb-2">WHO WE SERVE</h2>
+        <p class="text-center text-light mb-5" style="opacity: 0.8;">Customized programmes designed around your specific goals and scale</p>
 
-        <!-- TODO find out what they offer -->
-        <h2>What We Offer</h2>
+        <div class="row g-4">
+            
+            <!--  Private Demographic -->
+            <div class="col-lg-4">
+                <div class="p-4 p-md-5 rounded-4 h-100 shadow-lg d-flex flex-column justify-content-between" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div>
+                        <div class="mb-3 fs-2"></div>
+                        <h3 class="fw-bold text-white mb-3">Private Students and Individuals</h3>
+                        <p class="text-light mb-4" style="opacity: 0.85; line-height: 1.7;">
+                            Whether you are travelling to Cape Town for an immersive language experience or studying online from home, we handle school matching, accommodation, airport transfers and ongoing student support.
+                        </p>
+                        <ul class="list-unstyled text-light small mb-4" style="opacity: 0.9;">
+                            <li class="mb-2">✓ Accredited English school placement</li>
+                            <li class="mb-2">✓ Homestay, apartment &amp; hotel bookings</li>
+                            <li class="mb-2">✓ Visa guidance &amp; medical insurance support</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Pages" asp-action="Register" class="btn fw-bold py-2 px-4 rounded-pill text-dark w-100" style="background-color: #00C49F;">
+                        Apply as an Individual
+                    </a>
+                </div>
+            </div>
 
-        <div class="service-item">
-            <h3>Service One</h3>
-            <p>Description of service one goes here.</p>
+            <!--  Companies -->
+            <div class="col-lg-4">
+                <div class="p-4 p-md-5 rounded-4 h-100 shadow-lg d-flex flex-column justify-content-between" style="background-color: #0f172a; border: 1px solid rgba(56, 189, 248, 0.35);">
+                    <div>
+                        <div class="mb-3 fs-2"></div>
+                        <h3 class="fw-bold text-white mb-3">Companies and Corporate Teams</h3>
+                        <p class="text-light mb-4" style="opacity: 0.85; line-height: 1.7;">
+                            Empower your workforce to communicate confidently in international markets. We design bespoke Business English and executive immersion programmes tailored to your industry.
+                        </p>
+                        <ul class="list-unstyled text-light small mb-4" style="opacity: 0.9;">
+                            <li class="mb-2">✓ Executive &amp; Business English training</li>
+                            <li class="mb-2">✓ Flexible online or Cape Town study packages</li>
+                            <li class="mb-2">✓ Dedicated corporate account management</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Pages" asp-action="ContactUs" class="btn btn-primary fw-bold py-2 px-4 rounded-pill w-100" style="background-color: #2B74DD;">
+                        Request Corporate Quote
+                    </a>
+                </div>
+            </div>
+
+            <!--  Government and Institutions -->
+            <div class="col-lg-4">
+                <div class="p-4 p-md-5 rounded-4 h-100 shadow-lg d-flex flex-column justify-content-between" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div>
+                        <div class="mb-3 fs-2"></div>
+                        <h3 class="fw-bold text-white mb-3">Government and Institutions</h3>
+                        <p class="text-light mb-4" style="opacity: 0.85; line-height: 1.7;">
+                            We partner with ministries, scholarship boards, and educational institutions to coordinate large-scale group placements, official reporting and full logistical supervision in South Africa.
+                        </p>
+                        <ul class="list-unstyled text-light small mb-4" style="opacity: 0.9;">
+                            <li class="mb-2">✓ Group cohort placement &amp; progress tracking</li>
+                            <li class="mb-2">✓ Full accommodation, transport &amp; welfare care</li>
+                            <li class="mb-2">✓ Transparent institutional billing &amp; invoicing</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Pages" asp-action="ContactUs" class="btn btn-outline-light fw-bold py-2 px-4 rounded-pill w-100">
+                        Partner With Us
+                    </a>
+                </div>
+            </div>
+
         </div>
+    </div>
 
-        <div class="service-item">
-            <h3>Service Two</h3>
-            <p>Description of service two goes here.</p>
+    <div class="p-4 p-md-5 rounded-4 shadow-lg mb-5" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <h3 class="fw-bold text-white text-center mb-4">COMPLETE END-TO-END SUPPORT</h3>
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="p-3 rounded-3 h-100" style="background-color: #1e293b;">
+                    <h5 class="fw-bold text-info mb-2">School Matching</h5>
+                    <p class="small text-light mb-0" style="opacity: 0.85;">Unbiased comparison of accredited schools with exclusive partner promotions.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 rounded-3 h-100" style="background-color: #1e293b;">
+                    <h5 class="fw-bold text-info mb-2">Accommodation</h5>
+                    <p class="small text-light mb-0" style="opacity: 0.85;">Vetted host families, student apartments, hotels, and guest houses.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 rounded-3 h-100" style="background-color: #1e293b;">
+                    <h5 class="fw-bold text-info mb-2">Flights &amp; Medical</h5>
+                    <p class="small text-light mb-0" style="opacity: 0.85;">Guidance on travel bookings, airport transfers, and mandatory student cover.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 rounded-3 h-100" style="background-color: #1e293b;">
+                    <h5 class="fw-bold text-info mb-2">Local Activities</h5>
+                    <p class="small text-light mb-0" style="opacity: 0.85;">Curated Cape Town cultural excursions and social activities.</p>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="service-item">
-            <h3>Service Three</h3>
-            <p>Description of service three goes here.</p>
-        </div>
+    <!--  Bottom Addition info -->
+    <div class="text-center my-4">
+        <a asp-controller="Pages" asp-action="Register" class="btn btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg text-dark me-3 mb-2" style="background-color: #00C49F;">
+            Start Your Registration
+        </a>
+        <a asp-controller="Pages" asp-action="ContactUs" class="btn btn-lg btn-outline-light fw-bold px-5 py-3 rounded-pill mb-2">
+            Speak to an Advisor
+        </a>
+    </div>
 
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-        Footer with relevant info
-    </footer>
-
-</body>
-</html>
+</div>

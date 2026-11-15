@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Study Better Agency - Secure Payment";
+}
+
+<div class="container my-5 text-white" style="max-width: 750px;">
+
+
+    <div class="p-5 mb-5 rounded-4 shadow-lg text-center" style="background-color: #2B74DD;">
+        <h1 class="display-4 fw-bold text-white mb-2">SECURE PAYMENT PORTAL</h1>
+        <p class="lead text-white mb-0" style="opacity: 0.9;">Fast, safe and secure online tuition and accommodation payments.</p>
+    </div>
+
+    <!-- Payment form  -->
+    <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1) !important;">
+        <h3 class="fw-bold text-white mb-2 text-center">Payment for Services</h3>
+        <p class="text-center text-muted small mb-4">Enter your payment details below to complete your transaction with Study Better Agency.</p>
+        
+        <form id="paymentForm">
+            
+        
+            <div class="mb-4">
+                <label class="form-label fw-bold text-white">Amount to Pay</label>
+                <div class="input-group">
+                    <select class="form-select bg-dark text-white border-secondary" id="payCurrency" style="max-width: 110px;">
+                        <option value="ZAR" selected>ZAR (R)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                    </select>
+                    <input type="number" class="form-control bg-dark text-white border-secondary" id="payAmount" placeholder="e.g., 4500" min="1" step="0.01" required />
+                </div>
+                <div class="form-text text-secondary small mt-1">Remember: Paying in ZAR via our online link incurs zero transfer fees!</div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold text-white">Invoice Number or Client Name</label>
+                <input type="text" class="form-control bg-dark text-white border-secondary" id="payReference" placeholder="e.g., SBA-INV-2026 or Full Name" required />
+            </div>
+
+            <!-- Payment gateway buttons -->
+            <div class="d-grid gap-3 mt-4">
+                <button type="submit" id="payPalBtn" class="btn btn-warning btn-lg fw-bold py-3 rounded-pill shadow-sm text-dark" style="background-color: #ffc439; border: none;">
+                    Pay with <span class="fst-italic text-primary">Pay</span><span class="fst-italic text-info">Pal</span>
+                </button>
+                
+                <button type="submit" id="cardCheckoutBtn" class="btn btn-lg fw-bold py-3 rounded-pill shadow text-white" style="background-color: #060d1f; border: 2px solid #2B74DD;">
+                    Credit / Debit Card Checkout
+                </button>
+            </div>
+
+        
+            <div class="text-center mt-4 pt-3 border-top border-secondary">
+                <p class="text-muted small mb-2">Secured &amp; Encrypted Gateway</p>
+                <div class="d-flex justify-content-center gap-3 fs-5 text-light opacity-75">
+                    <span>Visa</span>
+                    <span>MasterCard</span>
+                    <span>PayPal</span>
+                    <span>SSL Secure</span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+<!-- successful payment popup -->
+<div class="modal fade" id="paymentSuccessModal" tabindex="-1" aria-labelledby="paymentSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg rounded-4 text-dark">
+            <div class="modal-header border-0 pb-0 justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center px-4 pb-5 pt-2">
+                <div class="mx-auto mb-3 rounded-circle d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px; background-color: #dcfce7; color: #16a34a; font-size: 2.5rem;">
+                    ✓
+                </div>
+                <h3 class="fw-bold mb-2" id="paymentSuccessModalLabel">Payment Successful!</h3>
+                <p class="text-muted mb-3">
+                    Thank you! Your payment has been successfully processed by Study Better Agency.
+                </p>
+                <div class="p-3 rounded-3 mb-4 text-start small" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                    <div><strong>Reference:</strong> <span id="modalPayRef" class="fw-bold"></span></div>
+                    <div><strong>Amount Paid:</strong> <span id="modalPayAmount" class="fw-bold text-success"></span></div>
+                    <div><strong>Status:</strong> <span class="badge bg-success">Confirmed</span></div>
+                </div>
+                <p class="small text-secondary mb-4">A digital receipt and course confirmation letter have been dispatched to your email.</p>
+                <button type="button" class="btn btn-primary px-5 py-2 fw-bold rounded-pill" data-bs-dismiss="modal">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const amount = document.getElementById('payAmount').value;
+            const currency = document.getElementById('payCurrency').value;
+            const reference = document.getElementById('payReference').value;
+
+            const paypalBtn = document.getElementById('payPalBtn');
+            const originalText = paypalBtn.innerHTML;
+            paypalBtn.disabled = true;
+            paypalBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing Secure Payment...';
+
+            setTimeout(function () {
+                document.getElementById('modalPayRef').textContent = reference;
+                document.getElementById('modalPayAmount').textContent = currency + ' ' + Number(amount).toLocaleString();
+
+                paypalBtn.disabled = false;
+                paypalBtn.innerHTML = originalText;
+                document.getElementById('paymentForm').reset();
+
+                const modal = new bootstrap.Modal(document.getElementById('paymentSuccessModal'));
+                modal.show();
+            }, 1500);
+        });
+    </script>
+}

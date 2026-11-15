@@ -1,41 +1,100 @@
 ﻿@{
-    ViewData["Title"] = "Study Better - Accommodation";
+    ViewData["Title"] = "Study Better Agency - Accommodation";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-    <style>
-    /* Add styles specific to the Accommodation page */
-    </style>
-</head>
-<body>
+<div class="container my-5 text-white">
 
-    <!-- Holds the title and paragraph about the page -->
-    <section class="PageIntro">
-        <h1>Accommodation</h1>
-
-        <!-- Will be changed to have actual content relevant to the page -->
-        <!-- TODO Get intro from client -->
-        <p>
-            Unsure what to do here to display the options, there are many photos so some kind of gallery split into the different types of places?
-            Will use the logo colours and hold the galleries and descriptions of places in coloured blocks like homepage.
-            Discuss with client about what is important.
+    <!-- Info Banner -->
+    <div class="p-5 mb-5 rounded-4 shadow-lg text-center" style="background-color: #38bdf8; color: #060d1f;">
+        <h1 class="display-4 fw-bold mb-3" style="color: #060d1f;">ACCOMMODATION OPTIONS</h1>
+        <h5 class="fw-bold mb-3" style="color: #0f172a;">COMFORTABLE and CONVENIENT ACCOMMODATION</h5>
+        <p class="w-75 mx-auto mb-4 fw-medium" style="color: #0f172a; line-height: 1.7;">
+            Finding the right place to stay is an important part of your study journey. Study Better Agency helps students secure safe, comfortable and affordable accommodation in Cape Town, with options to suit different budgets and lifestyles. Whether you prefer student residences, shared apartments or homestays, we'll help you find accommodation that allows you to focus on your studies and enjoy your experience in South Africa with confidence.
         </p>
-    </section>
-    <!-- Page Intro -->
+        <div>
+            <a asp-controller="Pages" asp-action="Register" class="btn fw-bold px-5 py-3 rounded-pill shadow text-white" style="background-color: #060d1f;">
+                GET STARTED
+            </a>
+        </div>
+    </div>
 
-    <!-- TODO design and make galleries -->
-    <!--? should we have 2 or 3 galleries in a row or have them stack vertically-->
+  
+    <div class="p-4 p-md-5 rounded-4 shadow-lg mb-4" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <h2 class="display-6 fw-bold text-center text-white mb-2">Accommodation Options</h2>
+        <p class="text-center text-light small mb-4" style="opacity: 0.75;">Use the arrows or swipe left and right to explore our accommodation types</p>
 
-    <!-- Footer -->
-    <footer>
-        Footer with relevant info
-    </footer>
-    <!-- Footer -->
+        <div id="accommodationCarousel" class="carousel slide mx-auto" data-bs-ride="false" style="max-width: 850px;">
+            
+        
+            <div class="carousel-indicators position-static mb-3">
+                <button type="button" data-bs-target="#accommodationCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Host Families"></button>
+                <button type="button" data-bs-target="#accommodationCarousel" data-bs-slide-to="1" aria-label="Apartment"></button>
+                <button type="button" data-bs-target="#accommodationCarousel" data-bs-slide-to="2" aria-label="Hotel"></button>
+                <button type="button" data-bs-target="#accommodationCarousel" data-bs-slide-to="3" aria-label="Guest House"></button>
+            </div>
 
-</body>
-</html>
+            <div class="carousel-inner rounded-4 overflow-hidden shadow">
+                
+                <!--Host Families -->
+                <div class="carousel-item active">
+                    <img src="~/images/accomodation1.png" class="d-block w-100" alt="Host Families" style="height: 420px; object-fit: cover;" />
+                    <div class="p-4 text-center" style="background-color: #1e293b;">
+                        <h3 class="fw-bold text-white mb-2">Host Families</h3>
+                        <p class="text-light mb-2 mx-auto" style="max-width: 650px; opacity: 0.9;">
+                            Live with a carefully selected South African host family close to your study location. Includes breakfast and dinner.Ideal for practicing English daily.
+                        </p>
+                        <div class="small text-info fw-semibold">
+                            Options: Single or Double Room (Shared or Private Bathroom) • Priced per week
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apartment -->
+                <div class="carousel-item">
+                    <img src="~/images/accomodation2.png" class="d-block w-100" alt="Apartment" style="height: 420px; object-fit: cover;" />
+                    <div class="p-4 text-center" style="background-color: #1e293b;">
+                        <h3 class="fw-bold text-white mb-2">Apartment</h3>
+                        <p class="text-light mb-0 mx-auto" style="max-width: 650px; opacity: 0.9;">
+                            Enjoy independent living in fully furnished shared or private apartments located in vibrant areas across Cape Town, close to shops and transport.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hotel -->
+                <div class="carousel-item">
+                    <img src="~/images/accomodation3.png" class="d-block w-100" alt="Hotel" style="height: 420px; object-fit: cover;" />
+                    <div class="p-4 text-center" style="background-color: #1e293b;">
+                        <h3 class="fw-bold text-white mb-2">Hotel</h3>
+                        <p class="text-light mb-0 mx-auto" style="max-width: 650px; opacity: 0.9;">
+                            For short-term stays or premium comfort upon arrival, we partner with trusted Cape Town hotels offering competitive student and visitor rates.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Guest House -->
+                <div class="carousel-item">
+                    <img src="~/images/accomodation4.png" class="d-block w-100" alt="Guest House" style="height: 420px; object-fit: cover;" />
+                    <div class="p-4 text-center" style="background-color: #1e293b;">
+                        <h3 class="fw-bold text-white mb-2">Guest House</h3>
+                        <p class="text-light mb-0 mx-auto" style="max-width: 650px; opacity: 0.9;">
+                            Cozy, welcoming guest houses offering personalized hospitality, secure surroundings, and a peaceful environment to focus on your studies.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- made the types be scrollable to the right for futeristic effect>>Right Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#accommodationCarousel" data-bs-slide="prev" style="height: 420px;">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#accommodationCarousel" data-bs-slide="next" style="height: 420px;">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+    </div>
+
+</div>

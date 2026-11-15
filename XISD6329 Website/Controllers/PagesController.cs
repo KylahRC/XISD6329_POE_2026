@@ -93,6 +93,7 @@ namespace XISD6329_Website.Controllers
         {
             // Logic to process or save contact messages goes here
             return RedirectToAction("ContactUs", new { success = true });
+  
         }
     }
 }

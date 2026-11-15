@@ -1,86 +1,87 @@
 ﻿@{
-    ViewData["Title"] = "Study Better - Online English Classes";
+    ViewData["Title"] = "Study Better Agency - English Courses";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/site.css" />
+<div class="container my-5 text-white">
 
-    <style>
-        /* Add styles specific to the Online English Classes page */
+    <!-- 1. Top Hero Image Banner (No Button) -->
+    <div class="mb-5 rounded-4 overflow-hidden shadow-lg">
+        <img src="~/images/English1.png" alt="English Courses" class="img-fluid w-100" style="max-height: 360px; object-fit: cover;" />
+    </div>
 
-        .classes 
-        {
-            display: flex;
-            justify-content: space-between; /* even distribution of space */
-            flex-wrap: wrap;
-            gap: 20px; /* set space between boxes */
-            padding: 40px 20px;
-        }
-
-        .class-option 
-        {
-            flex: 1 1 45%; /* holdover relative sizing from Figma 1440x1220 design resolution */
-            background: #D9D9D9; /* default background colour, change in the in line per block */
-            color: black;
-            padding: 20px;
-            box-shadow: 0 10px 4px rgba(0,0,0,0.25);
-            text-align: center;
-        }
-
-            .class-option h2 
-            {
-                font-size: 32px;
-                margin-bottom: 10px;
-            }
-
-            .class-option p 
-            {
-                font-size: 20px;
-                margin-bottom: 20px;
-            }    
-    </style>
-</head>
-<body>    
-
-    <!-- Holds the title and paragraph about the page -->
-    <section class="PageIntro">
-        <h1>Online English Classes</h1>
-
-        <!-- TODO get from client-->
-        <p>
-            Page shows 2 options with pricing.
-            Possibly keep the 2 columns and ask for expansion on the service to fill it out more.
-        </p>
-    </section>
-    <!-- Page Intro -->
-
-    <!-- Classes section -->
-    <!-- TODO decide on format -->
-    <!-- TODO get information on class options -->
-    <!--? link directly to orgs or have inquiries routed through SBA for commission -->
-    <section class="classes">
-        <!-- TODO get image of institute and add img to cards -->
-        <div class="class-option">
-            <h2>Option 1</h2>
-            <p>Details and pricing for option 1.</p>
+    <!-- 2. Intro Section (No Button) -->
+    <div class="p-4 p-md-5 rounded-4 shadow-lg mb-5" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <h1 class="display-5 fw-bold text-white text-center mb-4">BOOST YOUR KNOWLEDGE WITH STUDY BETTER</h1>
+        <div class="mx-auto" style="max-width: 850px;">
+            <h5 class="text-info fw-bold text-uppercase mb-2" style="letter-spacing: 1px;">Unlock Your Potential With Study Better</h5>
+            <h4 class="fw-semibold text-white mb-3">We Help You Choose the Right School.</h4>
+            <p class="text-light mb-3" style="opacity: 0.88; line-height: 1.75;">
+                Choosing the right English school can make all the difference to your success. At Study Better Agency, we carefully select our partner schools based on their teaching quality, student support, reputation, accreditation, learning environment, and overall value for money. We also negotiate exclusive special offers and promotions to help you get the best possible deal.
+            </p>
+            <p class="text-light mb-0" style="opacity: 0.88; line-height: 1.75;">
+                By taking the time to understand your goals, budget, and learning needs, we match you with the school that offers the greatest opportunity for success—so you can study with confidence and achieve your English language goals.
+            </p>
         </div>
-        <div class="class-option">
-            <h2>Option 2</h2>
-            <p>Details and pricing for option 2.</p>
+    </div>
+
+    <!-- 3. Course Options Section (4 Options with English2.png - English5.png, No Individual Buttons) -->
+    <div class="p-4 p-md-5 rounded-4 shadow-lg mb-5" style="background-color: #2B74DD;">
+        <h2 class="display-5 fw-bold text-white text-center mb-5">COURSE OPTIONS</h2>
+
+        <div class="row g-4">
+            
+            <!-- Option 1: English Courses -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100 shadow-sm text-center" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.12);">
+                    <h4 class="fw-bold text-white mb-3">ENGLISH COURSES</h4>
+                    <img src="~/images/English2.png" alt="English Courses" class="img-fluid rounded-3 mb-3 w-100" style="height: 220px; object-fit: cover;" />
+                    <p class="text-light mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        Build your confidence in speaking, listening, reading, and writing with our <strong>General English</strong> courses. Choose from flexible study options or accelerate your progress with our <strong>Intensive English</strong> programme, offering more classroom hours and faster results.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Option 2: IELTS Exam Preparation -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100 shadow-sm text-center" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.12);">
+                    <h4 class="fw-bold text-white mb-3">IELTS EXAM PREPARATION</h4>
+                    <img src="~/images/English3.png" alt="IELTS Exam Preparation" class="img-fluid rounded-3 mb-3 w-100" style="height: 220px; object-fit: cover;" />
+                    <p class="text-light mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        Planning to study at university or work abroad? Our <strong>IELTS exam preparation</strong> courses equip you with the strategies, skills, and confidence needed to achieve your target band score—guided by experienced instructors through focused lessons and practice tests.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Option 3: Business English -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100 shadow-sm text-center" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.12);">
+                    <h4 class="fw-bold text-white mb-3">BUSINESS ENGLISH</h4>
+                    <img src="~/images/English4.png" alt="Business English" class="img-fluid rounded-3 mb-3 w-100" style="height: 220px; object-fit: cover;" />
+                    <p class="text-light mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        Communicate professionally in today's global workplace. Our <strong>Business English</strong> courses are designed for professionals, entrepreneurs, and executives who want to improve their communication skills for meetings, presentations, negotiations, emails, and international business. Gain the confidence to succeed in an English-speaking business environment.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Option 4: Private Lessons -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100 shadow-sm text-center" style="background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.12);">
+                    <h4 class="fw-bold text-white mb-3">PRIVATE LESSONS</h4>
+                    <img src="~/images/English5.png" alt="Private Lessons" class="img-fluid rounded-3 mb-3 w-100" style="height: 220px; object-fit: cover;" />
+                    <p class="text-light mb-0" style="opacity: 0.9; line-height: 1.7;">
+                        Enjoy personalised, one-on-one English lessons tailored to your individual goals, learning style, and schedule. Whether you want to improve your conversation skills, prepare for an exam, strengthen your Business English, or focus on specific areas, our private lessons provide dedicated attention and maximum flexibility. Learn at your own pace with a qualified instructor.
+                    </p>
+                </div>
+            </div>
+
         </div>
-    </section>
-    <!-- Classes section -->
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        Footer with relevant info
-    </footer>
-    <!-- Footer -->
+    <!-- Register button hnas moved to here. -->
+    <div class="text-center my-5">
+        <a asp-controller="Pages" asp-action="Register" class="btn btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg text-dark" style="background-color: #00C49F; font-size: 1.15rem;">
+            Register
+        </a>
+    </div>
 
-</body>
-</html>
+</div>
